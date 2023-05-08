@@ -30,6 +30,17 @@ public class Charmander {
 		this.ataquesDisponibles = ataquesDisponibles;
 		this.puedeMoverse = true;
 	}
+	public Charmander(Integer posicion2, Integer energiaActual2, Integer energiaInicial2, Integer cantidadAdversarios2,
+			Integer nivel2, Map<Integer, List<Integer>> ataquesDisponibles2, Boolean puedeMoverse2) {
+		super();
+		this.posicion = posicion2;
+		this.energiaActual = energiaActual2;
+		this.energiaInicial = energiaInicial2;
+		this.cantidadAdversarios = cantidadAdversarios2;
+		this.nivel = nivel2;
+		this.ataquesDisponibles = ataquesDisponibles2;
+		this.puedeMoverse = puedeMoverse2;
+	}
 	public Integer getPosicion() {
 		return posicion;
 	}

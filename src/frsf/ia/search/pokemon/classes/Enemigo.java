@@ -64,7 +64,11 @@ public class Enemigo {
 		this.cantidadCiclosSinMoverse = cantidadCiclosSinMoverse;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Pokemon Enemigo[Id, pos, energia, ciclos]" + this.id + ", " + this.posicion + ", " + this.energia + ", " + this.cantidadCiclosSinMoverse;
+	}
 	
 	
 	
