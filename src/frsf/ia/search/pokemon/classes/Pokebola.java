@@ -67,4 +67,10 @@ public class Pokebola {
 	public void setEnergia(Integer energia) {
 		this.energia = energia;
 	}
+	
+	
+	@Override
+	public String toString() {
+		return "Pokebola[id, pos, energia]: "+this.id + ", " + this.posicion + ", " + this.energia;
+	}
 }

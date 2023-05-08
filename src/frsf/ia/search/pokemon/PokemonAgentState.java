@@ -63,7 +63,9 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	@Override
 	public SearchBasedAgentState clone() {
 		Map<Integer, List<Object>> newMapaAgente = this.mapaAgente;
-		Charmander newCharmander = this.charmander;
+		Charmander newCharmander = new Charmander(charmander.getPosicion(), charmander.getEnergiaActual(),
+				charmander.getEnergiaInicial(), charmander.getCantidadAdversarios(), charmander.getNivel(), charmander.getAtaquesDisponibles(), charmander.getPuedeMoverse());
+		
 		
 		PokemonAgentState newState = new PokemonAgentState(newCharmander, newMapaAgente);
 		return newState;
@@ -126,10 +128,14 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	private Map<Integer, List<Object>> inicializarMapa() {
 		Map<Integer, List<Object>>  mapa = new HashMap<Integer, List<Object>>();
 		mapa.put(1, List.of(List.of(2), VACIO, PokemonPerception.EMPTY_PERCEPTION));
-		mapa.put(2, List.of(List.of(1, 3), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
+		mapa.put(2, List.of(List.of(1, 3, 10), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
 		mapa.put(3, List.of(List.of(2, 4), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
-		mapa.put(4, List.of(List.of(3, 5), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
+		mapa.put(4, List.of(List.of(3, 5, 9), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
 		mapa.put(5, List.of(List.of(4), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
+		
+		mapa.put(10, List.of(List.of(2, 9), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
+		
+		mapa.put(9, List.of(List.of(4, 10), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
 		return mapa;
 	}
 

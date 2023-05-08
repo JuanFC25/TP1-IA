@@ -45,17 +45,20 @@ public class PokemonEnvironmentState extends EnvironmentState{
 		
 		//Primer elemento nodos adyacentes, Segundo elemento objeto que hay en el nodo, Tercer elemento la percepcion
 		mapaMundial.put(1, List.of(List.of(2), charmander, PokemonPerception.EMPTY_PERCEPTION));
-		mapaMundial.put(2, List.of(List.of(1, 3), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
+		mapaMundial.put(2, List.of(List.of(1, 3, 10), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
 		mapaMundial.put(3, List.of(List.of(2, 4), enemigo1, PokemonPerception.ENEMIGO_PERCEPTION));
-		mapaMundial.put(4, List.of(List.of(3, 5), pokebola1, PokemonPerception.POKEBOLA_PERCEPTION));
+		mapaMundial.put(4, List.of(List.of(3, 5, 9), pokebola1, PokemonPerception.POKEBOLA_PERCEPTION));
 		mapaMundial.put(5, List.of(List.of(4), boss, PokemonPerception.POKEMON_MAESTRO_PERCEPTION));
+		
+		mapaMundial.put(10, List.of(List.of(2, 9), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
+		mapaMundial.put(9, List.of(List.of(4, 10), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
 		
 	}
 
 	@Override
 	public String toString() {
-		return  "-----------------AMBIENTE------------- \\N" +
-				charmander.toString() + "  \\n  Mapa Mundial: " + mapaMundial;
+		return  "-----------------AMBIENTE-------------" + "\n" +
+				charmander.toString()  + "\n" + "Mapa Mundial: " + mapaMundial;
 	}
 
 	

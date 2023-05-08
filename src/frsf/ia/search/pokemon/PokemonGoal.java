@@ -8,7 +8,7 @@ import frsf.cidisi.faia.state.AgentState;
 public class PokemonGoal extends GoalTest{
 	@Override
 	public boolean isGoalState(AgentState agentState) {
-        if (((PokemonAgentState) agentState).isInMasterPokemonPosition()&&  !((PokemonAgentState) agentState).isMasterPokemonAlive()) {
+        if (((PokemonAgentState) agentState).isInMasterPokemonPosition()) {
             return true;
         }
         return false;
