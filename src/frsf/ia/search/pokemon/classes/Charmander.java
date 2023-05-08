@@ -11,6 +11,7 @@ public class Charmander {
 	private Integer energiaInicial;
 	private Integer cantidadAdversarios;
 	private Integer nivel;
+	private Boolean puedeMoverse;
 	private Map<Integer, List<Integer>> ataquesDisponibles; //clave(es el numero de ataque), lista con porcentaje de energia que aumenta el ataque y cantidad de ciclos desde ultimo uso
 	
 	
@@ -27,6 +28,7 @@ public class Charmander {
 		this.cantidadAdversarios = cantidadAdversarios;
 		this.nivel = nivel;
 		this.ataquesDisponibles = ataquesDisponibles;
+		this.puedeMoverse = true;
 	}
 	public Integer getPosicion() {
 		return posicion;
@@ -65,7 +67,17 @@ public class Charmander {
 		this.ataquesDisponibles = ataquesDisponibles;
 	}
 	
-	
+	public Boolean getPuedeMoverse() {
+		return puedeMoverse;
+	}
+	public void setPuedeMoverse(Boolean puedeMoverse) {
+		this.puedeMoverse = puedeMoverse;
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "CHARMANDER[pos, energia, nivel]: " + "[" + posicion + ", " + energiaActual + ", " + nivel  +" ]";
+	}
 	
 	
 }

@@ -5,6 +5,7 @@ import java.util.Map;
 
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
+import frsf.ia.search.pokemon.classes.Charmander;
 
 
 
@@ -38,8 +39,20 @@ public class PokemonEnvironment extends Environment {
 		Integer posicion = getEnvironmentState().getCharmander().getPosicion();
 		
 		perception.setNodosAdyacentes(this.getNodosAdyacentes(posicion));
+		perception.setNodosAdyacentes2(this.getNodosAdyacentes2(posicion));
+		perception.setCharmander(this.getCharmander());
 		
-		return null;
+		return perception;
+	}
+
+
+	private Charmander getCharmander() {
+		return ((PokemonEnvironmentState) this.environmentState).getCharmander();
+	}
+
+
+	private List<Object> getNodosAdyacentes2(Integer posicion) {
+		return ((PokemonEnvironmentState) this.environmentState).getNodosAdyacentes2(posicion);
 	}
 
 
@@ -47,6 +60,10 @@ public class PokemonEnvironment extends Environment {
 		return ((PokemonEnvironmentState) this.environmentState).getNodosAdyacentes(posicion);
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return environmentState.toString();
+	}
 
 }
