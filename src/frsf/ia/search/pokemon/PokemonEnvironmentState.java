@@ -39,9 +39,12 @@ public class PokemonEnvironmentState extends EnvironmentState{
 
 		
 		this.charmander = new Charmander(1, 20, 20, 2, 1 , new HashMap<String, List<Integer>>());
+
 		Enemigo enemigo1 = new Enemigo(1, 3, 25, 0);
-		PokemonMaestro boss = new PokemonMaestro(5, 35);
+		PokemonMaestro boss = new PokemonMaestro(5, 20);
 		Pokebola pokebola1 = new Pokebola(1, 4, 20);
+
+
 		cantCiclosDesdeUltimoUsoSatelite = 1;
 		mapaMundial = new HashMap<Integer, List<Object>>();
 		

@@ -32,10 +32,12 @@ public class RecogerEnergiaPokebola extends SearchAction{
 				pokemonState.eliminarPokebola(nodoActual);
 				charmander.setEnergiaActual(energia);
 				charmander.setPuedeMoverse(true);
+
 				charmander.incrementarContadoresAtaques();
 				charmander.evaluarSubirDeNivel();
+
 				pokemonState.setCharmander(charmander);
-				
+
 				
 				return pokemonState;
 			}
