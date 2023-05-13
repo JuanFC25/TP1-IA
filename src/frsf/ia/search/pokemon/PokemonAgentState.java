@@ -18,7 +18,7 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	private Map<Integer, List<Object>> mapaAgente; //igual que en ambiente, es la representacion interna del agente
 	
 	public final static Integer VACIO = 1000;
-	
+	private Boolean vencioPokemonMaestro = false;
 	
 	public PokemonAgentState() {
 		initState();
@@ -83,21 +83,27 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		//actualizo el pokemon agente con los datos del environment
 		charmander = pokemonPerception.getCharmander();
 
-		//List<Object> nodosAdyacentes = pokemonPerception.getNodosAdyacentes2();
+		//hacer lo de actualizar lista de enemigos.
 		 
 		Set<Integer> nodosAdyacentes = pokemonPerception.getNodosAdyacentes().keySet();
 		
-		for ( Integer nodo : nodosAdyacentes) {
+		if (pokemonPerception.getMapaMundial() == null) {
+			for ( Integer nodo : nodosAdyacentes) {
+				
+				Object contenido = pokemonPerception.getNodosAdyacentes().get(nodo).get(0);
+				Integer percepcion = (Integer) pokemonPerception.getNodosAdyacentes().get(nodo).get(1);
 		
-			Object contenido = pokemonPerception.getNodosAdyacentes().get(nodo).get(0);
-			Integer percepcion = (Integer) pokemonPerception.getNodosAdyacentes().get(nodo).get(1);
-			
-			if (contenido != VACIO) {
-				mapaAgente.put(nodo, List.of(mapaAgente.get(nodo).get(0), contenido, percepcion));
-			} else {
-				mapaAgente.put(nodo, List.of(mapaAgente.get(nodo).get(0), VACIO, percepcion));
+				if (contenido != VACIO) {
+					mapaAgente.put(nodo, List.of(mapaAgente.get(nodo).get(0), contenido, percepcion));
+				} else {
+					mapaAgente.put(nodo, List.of(mapaAgente.get(nodo).get(0), VACIO, percepcion));
+				}
 			}
+		} else {
+			this.setMapaAgente(pokemonPerception.getMapaMundial());
 		}
+		
+		
 		
 	}
 
@@ -117,7 +123,7 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	@Override
 	public void initState() {
 		// ver si hay que poner el mapa de nodos completos
-		
+		vencioPokemonMaestro = false;
 		mapaAgente = inicializarMapa();
 		charmander = new Charmander(1,20,20,2,1, null);
 		
@@ -131,7 +137,10 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		mapa.put(2, List.of(List.of(1, 3, 10), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
 		mapa.put(3, List.of(List.of(2, 4), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
 		mapa.put(4, List.of(List.of(3, 5, 9), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
-		mapa.put(5, List.of(List.of(4), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
+		
+		PokemonMaestro boss = new PokemonMaestro(5,10);
+		//ver si esto es necesario o no
+		mapa.put(5, List.of(List.of(4), boss, PokemonPerception.POKEMON_MAESTRO_PERCEPTION));
 		
 		mapa.put(10, List.of(List.of(2, 9), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
 		
@@ -142,7 +151,10 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 
 
 	public boolean isInMasterPokemonPosition() {
-		return (getCharmander().getPosicion() == 5);
+		if (getCharmander().getPosicion() == 5) {
+			return true;
+		}
+		else return false;
 	}
 
 
@@ -184,7 +196,7 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 
 
 	public void eliminarEnemigo(Integer nodo) {
-		mapaAgente.replace(nodo, List.of(mapaAgente.get(nodo), VACIO,  PokemonPerception.EMPTY_PERCEPTION));
+		mapaAgente.replace(nodo, List.of(mapaAgente.get(nodo).get(0), VACIO,  PokemonPerception.EMPTY_PERCEPTION));
 		
 	}
 
@@ -192,8 +204,17 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 
 
 	public boolean isMasterPokemonAlive() {
-		if(((PokemonMaestro) (mapaAgente.get(5).get(1))).getEnergia() == 0)return true;
-		return false;
+		
+		return !vencioPokemonMaestro;
+	}
+
+
+
+
+	public void vencerPokemonFinal(PokemonMaestro boss, Integer nodoActual) {
+		//seteo la condicion en el pokemon maestro para que se cumpla el goal
+		this.mapaAgente.replace(nodoActual, List.of(mapaAgente.get(nodoActual).get(0), boss, mapaAgente.get(nodoActual).get(2)));
+		this.vencioPokemonMaestro = true;
 	}
 
 	

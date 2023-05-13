@@ -27,6 +27,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 		
 		if((Integer) mapaAgente.get(charmander.getPosicion()).get(2) == PokemonPerception.ENEMIGO_PERCEPTION) {
 			Enemigo enemigo = ((Enemigo) mapaAgente.get(charmander.getPosicion()).get(1));
+			//esto preguntar.
 			if( charmander.getEnergiaActual() <= enemigo.getEnergia()) {
 				Integer energia = (int) (charmander.getEnergiaActual() - (enemigo.getEnergia()/4));
 				charmander.setEnergiaActual(energia);
@@ -77,7 +78,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return null;
+		return "NO PELEAR";
 	}
 }
 

@@ -20,8 +20,7 @@ public class PokemonPerception extends Perception{
     Charmander charmander; //pokemon agente
     Map<Integer, List<Object>> nodosAdyacentes; //map de los nodos adyacentes de un nodo. Compuesto por el nodo adyacente
     //como key y luego una lista de objetos(primer elemento el objeto que hay, puede ser null y luego la percepcion)
-    List<Object> nodosAdyacentes2; //prueba(creo que es mas facil que con map)
-    
+    Map<Integer, List<Object>> mapaMundial;    // key(nodo): lista de objetos: Primer elemento nodos adyacentes, Segundo elemento objeto que hay en el nodo, Tercer elemento la percepcion
    
     public PokemonPerception() {
         System.out.println("Se crea la percepcion" );
@@ -32,6 +31,11 @@ public class PokemonPerception extends Perception{
         super(agent, environment);
     }
     
+    
+    
+    
+    
+    //esta no se usa nunca creo
     /**
      * This method is used to setup the perception.
      */
@@ -45,10 +49,13 @@ public class PokemonPerception extends Perception{
 		
 		this.setCharmander(environmentState.getCharmander());
 		this.setNodosAdyacentes(environmentState.getNodosAdyacentes(posicion));
-		//nodosAdyacentes = environmentState.getNodosAdyacentes(posicion);
-		this.setNodosAdyacentes2(environmentState.getNodosAdyacentes2(posicion));
-		//nodosAdyacentes2 = environmentState.getNodosAdyacentes2(posicion);
 		
+		Map<Integer, List<Object>> mapaSatelite = (environmentState.usarSatelite());
+		if(mapaSatelite != null) {
+			this.setMapaMundial(mapaSatelite);
+		} else {
+			this.setMapaMundial(null);
+		}
 		
 	}
 
@@ -77,21 +84,21 @@ public class PokemonPerception extends Perception{
 	}
 
 
-
-
-	public List<Object> getNodosAdyacentes2() {
-		return nodosAdyacentes2;
+	
+	
+    public Map<Integer, List<Object>> getMapaMundial() {
+		return mapaMundial;
 	}
 
 
-	public void setNodosAdyacentes2(List<Object> nodosAdyacentes2) {
-		this.nodosAdyacentes2 = nodosAdyacentes2;
+	public void setMapaMundial(Map<Integer, List<Object>> mapaMundial) {
+		this.mapaMundial = mapaMundial;
 	}
-	
-	
-    @Override
+
+
+	@Override
     public String toString() {
-    	return charmander.toString() + "\n" + "Nodos adyacentes(nodo, contenido, percepcion): " + nodosAdyacentes2;
+    	return charmander.toString() + "\n" + "Nodos adyacentes(nodo, contenido, percepcion): " + nodosAdyacentes;
     }
     
 }

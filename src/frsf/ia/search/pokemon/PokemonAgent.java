@@ -15,6 +15,7 @@ import frsf.cidisi.faia.solver.search.BreathFirstSearch;
 import frsf.cidisi.faia.solver.search.DepthFirstSearch;
 import frsf.cidisi.faia.solver.search.Search;
 import frsf.ia.search.pokemon.actions.IrAN;
+import frsf.ia.search.pokemon.actions.NoPelear;
 import frsf.ia.search.pokemon.actions.Pelear;
 
 
@@ -30,10 +31,12 @@ public class PokemonAgent extends SearchBasedAgent{
 		
 		//crear Operadores
 		Vector<SearchAction> operators = new Vector<SearchAction>();
-		//operators.add(new Pelear());
+		operators.add(new Pelear());
+		//operators.add(new NoPelear());
 		for(int i=1; i<=5 ;  i++) {
 			operators.add(new IrAN(i));
 		}
+		
 		
 
 		 // Create the Problem which the Pacman will resolve
