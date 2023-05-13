@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import frsf.cidisi.faia.state.EnvironmentState;
+import frsf.ia.search.pokemon.classes.AtaqueEspecial;
 import frsf.ia.search.pokemon.classes.Charmander;
 import frsf.ia.search.pokemon.classes.Enemigo;
 import frsf.ia.search.pokemon.classes.Pokebola;
@@ -18,6 +19,7 @@ public class PokemonEnvironmentState extends EnvironmentState{
 	private Map<Integer, List<Object>> mapaMundial;    // key(nodo): lista de objetos: Primer elemento nodos adyacentes, Segundo elemento objeto que hay en el nodo, Tercer elemento la percepcion
 	private Charmander charmander;
 	private Integer cantCiclosDesdeUltimoUsoSatelite;
+	private List<AtaqueEspecial> listaAtaquesEspeciales;
 	
 	
 	public PokemonEnvironmentState(Map<Integer, List<Object>> m) {
@@ -34,9 +36,17 @@ public class PokemonEnvironmentState extends EnvironmentState{
 	// inicia el estado del ambiente
 	@Override
 	public void initState() {
+		AtaqueEspecial ataque1 = new AtaqueEspecial(2, 20, "Scary Face");
+		AtaqueEspecial ataque2 = new AtaqueEspecial(3, 30, "Slash");
+		AtaqueEspecial ataque3 = new AtaqueEspecial(4, 50, "Fire Fang");
+		listaAtaquesEspeciales = new ArrayList<>();
+		listaAtaquesEspeciales.add(ataque1);
+		listaAtaquesEspeciales.add(ataque2);
+		listaAtaquesEspeciales.add(ataque3);
+		
 		this.charmander = new Charmander(1, 20, 20, 2, 1 , new HashMap<Integer, List<Integer>>());
-		Enemigo enemigo1 = new Enemigo(1, 3, 25, 0);
-		PokemonMaestro boss = new PokemonMaestro(5, 15);
+		Enemigo enemigo1 = new Enemigo(1, 3, 5, 0);
+		PokemonMaestro boss = new PokemonMaestro(5, 10);
 		Pokebola pokebola1 = new Pokebola(1, 4, 10);
 		cantCiclosDesdeUltimoUsoSatelite = 1;
 		mapaMundial = new HashMap<Integer, List<Object>>();
@@ -50,8 +60,8 @@ public class PokemonEnvironmentState extends EnvironmentState{
 		mapaMundial.put(2, List.of(List.of(1, 3, 10), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
 		//mapaMundial.put(3, List.of(List.of(2, 4), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
 		mapaMundial.put(3, List.of(List.of(2, 4), enemigo1, PokemonPerception.ENEMIGO_PERCEPTION));
-		//mapaMundial.put(4, List.of(List.of(3, 5, 9), pokebola1, PokemonPerception.POKEBOLA_PERCEPTION));
-		mapaMundial.put(4, List.of(List.of(3, 5, 9), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
+		mapaMundial.put(4, List.of(List.of(3, 5, 9), pokebola1, PokemonPerception.POKEBOLA_PERCEPTION));
+		//mapaMundial.put(4, List.of(List.of(3, 5, 9), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
 		mapaMundial.put(5, List.of(List.of(4), boss, PokemonPerception.POKEMON_MAESTRO_PERCEPTION));
 		
 		mapaMundial.put(10, List.of(List.of(2, 9), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
@@ -133,6 +143,10 @@ public class PokemonEnvironmentState extends EnvironmentState{
 	public void vencerPokemonFinal(PokemonMaestro boss, Integer nodoActual) {
 		this.mapaMundial.replace(nodoActual, List.of(mapaMundial.get(nodoActual).get(0), boss, mapaMundial.get(nodoActual).get(2)));
 		
+	}
+
+	public void eliminarPokebola(Integer nodoActual) {
+		this.mapaMundial.replace(nodoActual, List.of(mapaMundial.get(nodoActual).get(0), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
 	}
 	
 	
