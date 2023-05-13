@@ -8,6 +8,7 @@ import java.util.Set;
 
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
+import frsf.ia.search.pokemon.classes.AtaqueEspecial;
 import frsf.ia.search.pokemon.classes.Charmander;
 import frsf.ia.search.pokemon.classes.PokemonMaestro;
 
@@ -16,6 +17,8 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	private Charmander charmander;
 	//Primer elemento nodos adyacentes, Segundo elemento objeto que hay en el nodo, Tercer elemento la percepcion
 	private Map<Integer, List<Object>> mapaAgente; //igual que en ambiente, es la representacion interna del agente
+	private List<AtaqueEspecial> listaAtaquesEspeciales;
+	
 	
 	public final static Integer VACIO = 1000;
 	private Boolean vencioPokemonMaestro = false;
@@ -127,6 +130,14 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		mapaAgente = inicializarMapa();
 		charmander = new Charmander(1,20,20,2,1, null);
 		
+		
+		AtaqueEspecial ataque1 = new AtaqueEspecial(2, 20, "Scary Face");
+		AtaqueEspecial ataque2 = new AtaqueEspecial(3, 30, "Slash");
+		AtaqueEspecial ataque3 = new AtaqueEspecial(4, 50, "Fire Fang");
+		listaAtaquesEspeciales = new ArrayList<>();
+		listaAtaquesEspeciales.add(ataque1);
+		listaAtaquesEspeciales.add(ataque2);
+		listaAtaquesEspeciales.add(ataque3);
 	}
 
 
@@ -209,6 +220,31 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	}
 
 
+	public void evaluarSubirDeNivel() {
+		
+		Integer energia = this.charmander.getEnergiaActual();
+		Integer energiaInicial = this.charmander.getEnergiaInicial();
+		switch (this.charmander.getNivel()) {
+		case 1: {
+			if(energia >= energiaInicial * 1.25) {
+				charmander.();
+				nivel = 2;
+			}
+		}
+		case 2: {
+			if(energia >= energiaInicial * 1.75) {
+				ataquesDisponibles.put("Ataque 2", 0);
+				nivel = 3;
+			}
+		}
+		case 3: {
+			if(energia >= energiaInicial * 2.2) {
+				ataquesDisponibles.put("Ataque 3", 0);
+				nivel = 4;
+			}
+		}
+		}
+	}
 
 
 	public void vencerPokemonFinal(PokemonMaestro boss, Integer nodoActual) {
