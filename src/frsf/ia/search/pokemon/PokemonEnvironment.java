@@ -51,7 +51,7 @@ public class PokemonEnvironment extends Environment {
 		return perception;
 	}
 
-	/*
+	
 	@Override
     public boolean agentFailed(Action actionReturned) {
 
@@ -66,7 +66,7 @@ public class PokemonEnvironment extends Environment {
 
         return false;
     }
-*/
+
 	
 	private Charmander getCharmander() {
 		return ((PokemonEnvironmentState) this.environmentState).getCharmander();
