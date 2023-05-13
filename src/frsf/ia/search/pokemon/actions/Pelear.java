@@ -38,9 +38,10 @@ public class Pelear extends SearchAction{
 					charmander.setPuedeMoverse(true);
 					
 					pokemonState.setCharmander(charmander);
+					//Evaluo subir de nivel
+					pokemonState.evaluarSubirDeNivel();
 					
 					
-					//hacer subir de nivel
 					//hacer contadores para ataques
 					
 					//ver que pasa si lo unico que se ejecuta es ir a n
@@ -57,9 +58,11 @@ public class Pelear extends SearchAction{
 					charmander.setPuedeMoverse(true);
 					
 					pokemonState.setCharmander(charmander);
+					//Evaluo subir de nivel
+					pokemonState.evaluarSubirDeNivel();
+					
 					pokemonState.vencerPokemonFinal(boss, nodoActual);
-			
-					//hacer subir de nivel
+					
 					//hacer contadores para ataques
 					
 					//ver que pasa si lo unico que se ejecuta es ir a n
@@ -106,6 +109,9 @@ public class Pelear extends SearchAction{
 					pokemonEnvironmentState.eliminarEnemigo(nodoActual);
 					pokemonEnvironmentState.setCharmander(charmander);
 					
+					//Evaluo subir de nivel
+					pokemonState.evaluarSubirDeNivel();
+					
 					return pokemonEnvironmentState;
 				}
 			} else if((Integer) mapaAmbiente.get(charmander.getPosicion()).get(2) == PokemonPerception.POKEMON_MAESTRO_PERCEPTION) {
@@ -123,6 +129,9 @@ public class Pelear extends SearchAction{
 					
 					pokemonEnvironmentState.setCharmander(charmander);
 					pokemonEnvironmentState.vencerPokemonFinal(boss, nodoActual);
+					
+					//Evaluo subir de nivel
+					pokemonState.evaluarSubirDeNivel();
 					
 					return pokemonEnvironmentState;
 				}

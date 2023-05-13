@@ -32,7 +32,10 @@ public class RecogerEnergiaPokebola extends SearchAction{
 				
 				charmander.setEnergiaActual(energia);
 				charmander.setPuedeMoverse(true);
+				
 				pokemonState.setCharmander(charmander);
+				//Evaluo subir de nivel
+				pokemonState.evaluarSubirDeNivel();
 				
 				return pokemonState;
 			}
@@ -66,6 +69,8 @@ public class RecogerEnergiaPokebola extends SearchAction{
 				
 				pokemonEnvironmentState.setCharmander(charmander);
 				pokemonEnvironmentState.eliminarPokebola(nodoActual);
+				//Evaluo subir de nivel
+				pokemonState.evaluarSubirDeNivel();
 				
 				return pokemonEnvironmentState;
 			}

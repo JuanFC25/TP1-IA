@@ -34,6 +34,15 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		super();
 		this.charmander = charmander;
 		this.mapaAgente = mapaAgente;
+		
+
+		AtaqueEspecial ataque1 = new AtaqueEspecial(2, 20, "Scary Face");
+		AtaqueEspecial ataque2 = new AtaqueEspecial(3, 30, "Slash");
+		AtaqueEspecial ataque3 = new AtaqueEspecial(4, 50, "Fire Fang");
+		listaAtaquesEspeciales = new ArrayList<>();
+		listaAtaquesEspeciales.add(ataque1);
+		listaAtaquesEspeciales.add(ataque2);
+		listaAtaquesEspeciales.add(ataque3);
 
 	}
 
@@ -211,14 +220,10 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		
 	}
 
-
-
-
 	public boolean isMasterPokemonAlive() {
 		
 		return !vencioPokemonMaestro;
 	}
-
 
 	public void evaluarSubirDeNivel() {
 		Integer energia = this.charmander.getEnergiaActual();
@@ -228,19 +233,19 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		case 1: {
 			if(energia >= energiaInicial * 1.25) {
 				charmander.addAtaqueDisponible(this.listaAtaquesEspeciales.get(0));
-				charmander.setNivel(2);
+				//charmander.setNivel(2);
 			}
 		}
 		case 2: {
 			if(energia >= energiaInicial * 1.75) {
 				charmander.addAtaqueDisponible(this.listaAtaquesEspeciales.get(1));
-				charmander.setNivel(3);
+				//charmander.setNivel(3);
 			}
 		}
 		case 3: {
 			if(energia >= energiaInicial * 2.2) {
 				charmander.addAtaqueDisponible(this.listaAtaquesEspeciales.get(2));
-				charmander.setNivel(4);
+				//charmander.setNivel(4);
 			}
 		}
 		}
