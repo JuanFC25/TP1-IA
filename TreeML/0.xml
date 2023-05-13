@@ -1,178 +1,184 @@
 <tree id="0" edgedefault="directed">
 <node Id="0" Action="null" Cost="0.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 20, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="1" Action="IR A NODO N&#176;2" Cost="1.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 20, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="2" Action="NO PELEAR" Cost="2.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 14, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="3" Action="NO PELEAR" Cost="3.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 8, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="4" Action="IR A NODO N&#176;1" Cost="3.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [1, 14, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="5" Action="IR A NODO N&#176;3" Cost="3.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 14, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="6" Action="NO PELEAR" Cost="4.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="7" Action="IR A NODO N&#176;1" Cost="4.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [1, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="8" Action="IR A NODO N&#176;3" Cost="4.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="12" Action="NO PELEAR" Cost="5.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, -4, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="13" Action="IR A NODO N&#176;1" Cost="5.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [1, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="14" Action="IR A NODO N&#176;3" Cost="5.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="21" Action="IR A NODO N&#176;2" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="35" Action="NO PELEAR" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, -4, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="22" Action="IR A NODO N&#176;2" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="23" Action="IR A NODO N&#176;4" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="36" Action="NO PELEAR" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, -4, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="37" Action="RECOJO POKEBOLA" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 22, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="61" Action="IR A NODO N&#176;3" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 22, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="62" Action="IR A NODO N&#176;5" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 22, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="62" Action="IR A NODO N&#176;3" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 22, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="63" Action="IR A NODO N&#176;5" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 22, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="15" Action="IR A NODO N&#176;2" Cost="5.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="24" Action="NO PELEAR" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="38" Action="NO PELEAR" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, -4, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="39" Action="IR A NODO N&#176;1" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [1, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="40" Action="IR A NODO N&#176;3" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="63" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="64" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="65" Action="IR A NODO N&#176;4" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="65" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="66" Action="IR A NODO N&#176;4" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 2, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="16" Action="IR A NODO N&#176;2" Cost="5.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="17" Action="IR A NODO N&#176;4" Cost="5.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="25" Action="NO PELEAR" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="41" Action="NO PELEAR" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, -4, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="42" Action="IR A NODO N&#176;1" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [1, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="43" Action="IR A NODO N&#176;3" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="66" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="67" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="68" Action="IR A NODO N&#176;4" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="68" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="69" Action="IR A NODO N&#176;4" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 2, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="26" Action="RECOJO POKEBOLA" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 28, 2, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="44" Action="IR A NODO N&#176;3" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 28, 2, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="45" Action="IR A NODO N&#176;5" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 28, 2, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="69" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 28, 2, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="70" Action="IR A NODO N&#176;4" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 28, 2, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="71" Action="PELEAR" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 12, 2, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="70" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 28, 2, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="71" Action="IR A NODO N&#176;4" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 28, 2, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="72" Action="NO PELEAR" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 20, 2, true ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="9" Action="IR A NODO N&#176;2" Cost="4.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 14, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="18" Action="NO PELEAR" Cost="5.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 8, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="27" Action="NO PELEAR" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="28" Action="IR A NODO N&#176;1" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [1, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="29" Action="IR A NODO N&#176;3" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="46" Action="NO PELEAR" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, -4, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="47" Action="IR A NODO N&#176;1" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [1, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="48" Action="IR A NODO N&#176;3" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="72" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="73" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="74" Action="IR A NODO N&#176;4" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="74" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="75" Action="IR A NODO N&#176;4" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 2, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="49" Action="IR A NODO N&#176;2" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="75" Action="NO PELEAR" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="50" Action="IR A NODO N&#176;2" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="51" Action="IR A NODO N&#176;4" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="76" Action="NO PELEAR" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="77" Action="RECOJO POKEBOLA" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 28, 2, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="50" Action="IR A NODO N&#176;2" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 8, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="51" Action="IR A NODO N&#176;4" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 8, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="77" Action="NO PELEAR" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, true ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="78" Action="RECOJO POKEBOLA" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 28, 2, true ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="10" Action="IR A NODO N&#176;2" Cost="4.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 14, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="11" Action="IR A NODO N&#176;4" Cost="4.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 14, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="19" Action="NO PELEAR" Cost="5.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 8, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="30" Action="NO PELEAR" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="31" Action="IR A NODO N&#176;1" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [1, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="32" Action="IR A NODO N&#176;3" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="52" Action="NO PELEAR" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, -4, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="53" Action="IR A NODO N&#176;1" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [1, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="54" Action="IR A NODO N&#176;3" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="78" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="79" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="80" Action="IR A NODO N&#176;4" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 2, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="80" Action="IR A NODO N&#176;2" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="81" Action="IR A NODO N&#176;4" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 2, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="55" Action="IR A NODO N&#176;2" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="81" Action="NO PELEAR" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="56" Action="IR A NODO N&#176;2" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="57" Action="IR A NODO N&#176;4" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 8, 1, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="82" Action="NO PELEAR" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="83" Action="RECOJO POKEBOLA" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 28, 2, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="56" Action="IR A NODO N&#176;2" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 8, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="57" Action="IR A NODO N&#176;4" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 8, 1, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="83" Action="NO PELEAR" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 2, 1, true ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], Pokebola[id, pos, energia]: 1, 4, 20, 3], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="84" Action="RECOJO POKEBOLA" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 28, 2, true ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="20" Action="RECOJO POKEBOLA" Cost="5.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 34, 2, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="33" Action="IR A NODO N&#176;3" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 34, 2, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="34" Action="IR A NODO N&#176;5" Cost="6.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 34, 2, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="58" Action="IR A NODO N&#176;2" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 34, 2, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <node Id="59" Action="IR A NODO N&#176;4" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 34, 2, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="84" Action="PELEAR" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 14, 2, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], 1000, 0], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="85" Action="IR A NODO N&#176;3" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 34, 2, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="86" Action="IR A NODO N&#176;5" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 34, 2, false ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
-<node Id="60" Action="PELEAR" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 18, 2, true ]
-Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 20, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="85" Action="PELEAR" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [2, 14, 2, true ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], 1000, 0], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="86" Action="IR A NODO N&#176;3" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [3, 34, 2, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="87" Action="IR A NODO N&#176;5" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 34, 2, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="60" Action="NO PELEAR" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 26, 2, true ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="61" Action="PELEO CON ATAQUE ESPECIAL" Cost="7.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 12, 2, true ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="88" Action="NO PELEAR" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [5, 18, 2, true ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
+<node Id="89" Action="IR A NODO N&#176;4" Cost="8.0" Estado_Agente="CHARMANDER[pos, energia, nivel, puedeMoverse]: [4, 26, 2, false ]
+Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia, ciclos): 1, 3, 25, 0], 1], 3=[[2, 4], 1000, 0], 4=[[3, 5, 9], 1000, 0], 5=[[4], Pokemon Maestro[Pos, energia]: 5, 35, 2], 9=[[4, 10], 1000, 0], 10=[[2, 9], 1000, 0]}"/>
 <edge source="0" target="1"/>
 <edge source="1" target="2"/>
 <edge source="2" target="3"/>
@@ -196,28 +202,28 @@ Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia
 <edge source="21" target="35"/>
 <edge source="22" target="36"/>
 <edge source="23" target="37"/>
-<edge source="37" target="61"/>
 <edge source="37" target="62"/>
+<edge source="37" target="63"/>
 <edge source="15" target="24"/>
 <edge source="24" target="38"/>
 <edge source="24" target="39"/>
 <edge source="24" target="40"/>
-<edge source="39" target="63"/>
-<edge source="40" target="64"/>
+<edge source="39" target="64"/>
 <edge source="40" target="65"/>
+<edge source="40" target="66"/>
 <edge source="16" target="25"/>
 <edge source="17" target="26"/>
 <edge source="25" target="41"/>
 <edge source="25" target="42"/>
 <edge source="25" target="43"/>
-<edge source="42" target="66"/>
-<edge source="43" target="67"/>
+<edge source="42" target="67"/>
 <edge source="43" target="68"/>
+<edge source="43" target="69"/>
 <edge source="26" target="44"/>
 <edge source="26" target="45"/>
-<edge source="44" target="69"/>
 <edge source="44" target="70"/>
-<edge source="45" target="71"/>
+<edge source="44" target="71"/>
+<edge source="45" target="72"/>
 <edge source="9" target="18"/>
 <edge source="18" target="27"/>
 <edge source="18" target="28"/>
@@ -228,12 +234,12 @@ Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia
 <edge source="28" target="49"/>
 <edge source="29" target="50"/>
 <edge source="29" target="51"/>
-<edge source="47" target="72"/>
-<edge source="48" target="73"/>
+<edge source="47" target="73"/>
 <edge source="48" target="74"/>
-<edge source="49" target="75"/>
-<edge source="50" target="76"/>
-<edge source="51" target="77"/>
+<edge source="48" target="75"/>
+<edge source="49" target="76"/>
+<edge source="50" target="77"/>
+<edge source="51" target="78"/>
 <edge source="10" target="19"/>
 <edge source="11" target="20"/>
 <edge source="19" target="30"/>
@@ -245,18 +251,21 @@ Mapa agente: {1=[[2], 1000, 0], 2=[[1, 3, 10], [Pokemon Enemigo(Id, pos, energia
 <edge source="31" target="55"/>
 <edge source="32" target="56"/>
 <edge source="32" target="57"/>
-<edge source="53" target="78"/>
-<edge source="54" target="79"/>
+<edge source="53" target="79"/>
 <edge source="54" target="80"/>
-<edge source="55" target="81"/>
-<edge source="56" target="82"/>
-<edge source="57" target="83"/>
+<edge source="54" target="81"/>
+<edge source="55" target="82"/>
+<edge source="56" target="83"/>
+<edge source="57" target="84"/>
 <edge source="20" target="33"/>
 <edge source="20" target="34"/>
 <edge source="33" target="58"/>
 <edge source="33" target="59"/>
 <edge source="34" target="60"/>
-<edge source="58" target="84"/>
-<edge source="59" target="85"/>
+<edge source="34" target="61"/>
+<edge source="58" target="85"/>
 <edge source="59" target="86"/>
+<edge source="59" target="87"/>
+<edge source="60" target="88"/>
+<edge source="60" target="89"/>
 </tree>
