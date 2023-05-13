@@ -39,7 +39,7 @@ public class IrAN extends SearchAction{
 		
 		//
 		
-		if (charmander.getEnergiaActual() > 0 && pokemonState.cantidadMovimientosSinPerderEnergia <50) {         // se fija si el pokemon agente esta vivo
+		if (charmander.getEnergiaActual() > 0 && pokemonState.cantidadMovimientosSinPerderEnergia <6) {         // se fija si el pokemon agente esta vivo
 			//primero pregunto si puede moverse, ya que si se movio antes debe hacer otra accion salvo que el nodo este vacio
 			if (charmander.getPuedeMoverse() == false) {
 				pokemonState.cantidadMovimientosSinPerderEnergia +=1;
