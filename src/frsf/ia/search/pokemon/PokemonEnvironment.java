@@ -3,8 +3,10 @@ package frsf.ia.search.pokemon;
 import java.util.List;
 import java.util.Map;
 
+import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
+
 import frsf.ia.search.pokemon.classes.Charmander;
 
 
@@ -49,7 +51,23 @@ public class PokemonEnvironment extends Environment {
 		return perception;
 	}
 
+	/*
+	@Override
+    public boolean agentFailed(Action actionReturned) {
 
+        PokemonEnvironmentState pokemonEnvironmentState =
+                this.getEnvironmentState();
+
+        int agentEnergy = pokemonEnvironmentState.getCharmander().getEnergiaActual();
+
+
+        if (agentEnergy < 1)
+            return true;
+
+        return false;
+    }
+*/
+	
 	private Charmander getCharmander() {
 		return ((PokemonEnvironmentState) this.environmentState).getCharmander();
 	}
