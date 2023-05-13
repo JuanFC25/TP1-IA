@@ -37,7 +37,9 @@ public class IrAN extends SearchAction{
 		
 		List<Integer> nodosAdyacentes = (List<Integer>) pokemonState.getMapaAgente().get(nodoActual).get(0);
 		
-		if (charmander.getEnergiaActual() > 0 && pokemonState.cantidadMovimientosSinPerderEnergia <8) {         // se fija si el pokemon agente esta vivo
+		//
+		
+		if (charmander.getEnergiaActual() > 0 && pokemonState.cantidadMovimientosSinPerderEnergia <50) {         // se fija si el pokemon agente esta vivo
 			//primero pregunto si puede moverse, ya que si se movio antes debe hacer otra accion salvo que el nodo este vacio
 			if (charmander.getPuedeMoverse() == false) {
 				pokemonState.cantidadMovimientosSinPerderEnergia +=1;
@@ -46,6 +48,7 @@ public class IrAN extends SearchAction{
 			}
 			
 			if(charmander.getPuedeMoverse() ||((int) (pokemonState.getMapaAgente().get(nodoActual).get(2))) == PokemonPerception.EMPTY_PERCEPTION) {
+				
 				if(nodosAdyacentes != null && nodosAdyacentes.contains(nodo)) {
 					charmander.setPosicion(nodo);
 					charmander.setPuedeMoverse(false);
