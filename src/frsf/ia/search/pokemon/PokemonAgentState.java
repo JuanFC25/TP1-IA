@@ -221,26 +221,26 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 
 
 	public void evaluarSubirDeNivel() {
-		
 		Integer energia = this.charmander.getEnergiaActual();
 		Integer energiaInicial = this.charmander.getEnergiaInicial();
+		
 		switch (this.charmander.getNivel()) {
 		case 1: {
 			if(energia >= energiaInicial * 1.25) {
-				charmander.();
-				nivel = 2;
+				charmander.addAtaqueDisponible(this.listaAtaquesEspeciales.get(0));
+				charmander.setNivel(2);
 			}
 		}
 		case 2: {
 			if(energia >= energiaInicial * 1.75) {
-				ataquesDisponibles.put("Ataque 2", 0);
-				nivel = 3;
+				charmander.addAtaqueDisponible(this.listaAtaquesEspeciales.get(1));
+				charmander.setNivel(3);
 			}
 		}
 		case 3: {
 			if(energia >= energiaInicial * 2.2) {
-				ataquesDisponibles.put("Ataque 3", 0);
-				nivel = 4;
+				charmander.addAtaqueDisponible(this.listaAtaquesEspeciales.get(2));
+				charmander.setNivel(4);
 			}
 		}
 		}
