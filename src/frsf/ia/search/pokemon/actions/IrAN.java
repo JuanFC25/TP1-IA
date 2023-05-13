@@ -37,12 +37,15 @@ public class IrAN extends SearchAction{
 		
 		List<Integer> nodosAdyacentes = (List<Integer>) pokemonState.getMapaAgente().get(nodoActual).get(0);
 		
-		
+		//primero pregunto si puede moverse, ya que si se movio antes debe hacer otra accion salvo que el nodo este vacio
 		if(charmander.getPuedeMoverse() ||((int) (pokemonState.getMapaAgente().get(nodoActual).get(2))) == PokemonPerception.EMPTY_PERCEPTION) {
 			if(nodosAdyacentes != null && nodosAdyacentes.contains(nodo)) {
 				charmander.setPosicion(nodo);
+				charmander.setPuedeMoverse(false);
 				pokemonState.setCharmander(charmander);
-				pokemonState.modificarPosicionCharmander(nodoActual, charmander); //metodo que actualiza la posicion de charmander en pokemon Agent State
+				
+				//pokemonState.modificarPosicionCharmander(nodoActual, charmander); //metodo que actualiza la posicion de charmander en pokemon Agent State
+				//ver si sirve
 				
 				return pokemonState;
 			}
@@ -65,7 +68,7 @@ public class IrAN extends SearchAction{
 		PokemonEnvironmentState pokemonEnvironmentState = (PokemonEnvironmentState) est;
 		
 		Charmander charmander = pokemonEnvironmentState.getCharmander();
-		Integer nodoActual = charmander.getPosicion();
+		Integer nodoActual =  charmander.getPosicion();
 		
 		List<Integer> nodosAdyacentes = (List<Integer>) pokemonEnvironmentState.getMapaMundial().get(nodoActual).get(0);
 		
@@ -73,11 +76,14 @@ public class IrAN extends SearchAction{
 			if(nodosAdyacentes != null && nodosAdyacentes.contains(nodo)) {
 				charmander.setPosicion(nodo);
 				pokemonState.setCharmander(charmander);
-				pokemonState.modificarPosicionCharmander(nodoActual, charmander);
+				charmander.setPuedeMoverse(false);
+				//ver si sirve
+				//pokemonState.modificarPosicionCharmander(nodoActual, charmander);
 		
 				
 				pokemonEnvironmentState.setCharmander(charmander);
-				pokemonEnvironmentState.modificarPosicionCharmander(nodoActual, charmander);
+				//ver si sirve
+				//pokemonEnvironmentState.modificarPosicionCharmander(nodoActual, charmander);
 				
 				return pokemonEnvironmentState;
 			}

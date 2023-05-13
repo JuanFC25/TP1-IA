@@ -38,9 +38,13 @@ public class PokemonEnvironment extends Environment {
 		
 		Integer posicion = getEnvironmentState().getCharmander().getPosicion();
 		
+		perception.setMapaMundial(this.getMapaMundial());
+		
 		perception.setNodosAdyacentes(this.getNodosAdyacentes(posicion));
-		perception.setNodosAdyacentes2(this.getNodosAdyacentes2(posicion));
+
 		perception.setCharmander(this.getCharmander());
+		
+		
 		
 		return perception;
 	}
@@ -51,13 +55,16 @@ public class PokemonEnvironment extends Environment {
 	}
 
 
-	private List<Object> getNodosAdyacentes2(Integer posicion) {
-		return ((PokemonEnvironmentState) this.environmentState).getNodosAdyacentes2(posicion);
-	}
 
 
 	private Map<Integer, List<Object>> getNodosAdyacentes(Integer posicion) {	
 		return ((PokemonEnvironmentState) this.environmentState).getNodosAdyacentes(posicion);
+	}
+	
+	
+	//aca se usa el satelite
+	private Map<Integer, List<Object>> getMapaMundial() {	
+		return ((PokemonEnvironmentState) this.environmentState).usarSatelite();
 	}
 	
 	@Override
@@ -66,4 +73,6 @@ public class PokemonEnvironment extends Environment {
 		return environmentState.toString();
 	}
 
+	
+	
 }
