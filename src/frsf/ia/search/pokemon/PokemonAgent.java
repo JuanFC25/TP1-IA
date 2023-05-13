@@ -37,7 +37,7 @@ public class PokemonAgent extends SearchBasedAgent{
 		operators.add(new NoPelear());
 		operators.add(new PelearConAtaqueEspecial());
 		operators.add(new RecogerEnergiaPokebola());
-		for(int i=1; i<=29 ;  i++) {
+		for(int i=1; i<=10 ;  i++) {
 			operators.add(new IrAN(i));
 		}
 		
