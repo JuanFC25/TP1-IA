@@ -29,10 +29,13 @@ public class RecogerEnergiaPokebola extends SearchAction{
 				Pokebola pokebola = ((Pokebola) mapaAgente.get(charmander.getPosicion()).get(1));
 				Integer energia = charmander.getEnergiaActual() + pokebola.getEnergia();
 				//ver si hay que armar funcion eliminarPokebola
-				
+				pokemonState.eliminarPokebola(nodoActual);
 				charmander.setEnergiaActual(energia);
 				charmander.setPuedeMoverse(true);
+				charmander.incrementarContadoresAtaques();
+				charmander.evaluarSubirDeNivel();
 				pokemonState.setCharmander(charmander);
+				
 				
 				return pokemonState;
 			}
@@ -62,10 +65,14 @@ public class RecogerEnergiaPokebola extends SearchAction{
 				charmander.setEnergiaActual(energia);
 				charmander.setPuedeMoverse(true);
 				
+				pokemonState.eliminarPokebola(nodoActual);
+				charmander.incrementarContadoresAtaques();
+				charmander.evaluarSubirDeNivel();
 				pokemonState.setCharmander(charmander);
 				
 				pokemonEnvironmentState.setCharmander(charmander);
 				pokemonEnvironmentState.eliminarPokebola(nodoActual);
+				
 				
 				return pokemonEnvironmentState;
 			}

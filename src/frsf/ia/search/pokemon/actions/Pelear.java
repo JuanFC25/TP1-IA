@@ -31,19 +31,20 @@ public class Pelear extends SearchAction{
 			if((Integer) mapaAgente.get(charmander.getPosicion()).get(2) == PokemonPerception.ENEMIGO_PERCEPTION) {
 				Enemigo enemigo = ((Enemigo) mapaAgente.get(charmander.getPosicion()).get(1));
 				if( charmander.getEnergiaActual() >  enemigo.getEnergia()) {
-					//pokemonState.eliminarEnemigo(nodoActual);
+					pokemonState.eliminarEnemigo(nodoActual);
 					Integer energia = (int) (charmander.getEnergiaActual() - enemigo.getEnergia() + enemigo.getEnergia() * 0.2);
 					charmander.setEnergiaActual(energia);
 					charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
 					charmander.setPuedeMoverse(true);
+					charmander.incrementarContadoresAtaques();
+					charmander.evaluarSubirDeNivel();
 					
 					pokemonState.setCharmander(charmander);
-					
-					
-					//hacer subir de nivel
+			
+				
 					//hacer contadores para ataques
+				
 					
-					//ver que pasa si lo unico que se ejecuta es ir a n
 					
 					return pokemonState;
 				}
@@ -55,9 +56,13 @@ public class Pelear extends SearchAction{
 					charmander.setEnergiaActual(energia);
 					charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
 					charmander.setPuedeMoverse(true);
+					charmander.incrementarContadoresAtaques();
+					charmander.evaluarSubirDeNivel();
 					
 					pokemonState.setCharmander(charmander);
 					pokemonState.vencerPokemonFinal(boss, nodoActual);
+					
+					
 			
 					//hacer subir de nivel
 					//hacer contadores para ataques
@@ -99,12 +104,17 @@ public class Pelear extends SearchAction{
 					charmander.setEnergiaActual(energia);
 					charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
 					charmander.setPuedeMoverse(true);
+					charmander.incrementarContadoresAtaques();
+					charmander.evaluarSubirDeNivel();
+					
 					
 					pokemonState.eliminarEnemigo(nodoActual);
 					pokemonState.setCharmander(charmander);
 					
 					pokemonEnvironmentState.eliminarEnemigo(nodoActual);
 					pokemonEnvironmentState.setCharmander(charmander);
+				
+					
 					
 					return pokemonEnvironmentState;
 				}
@@ -117,12 +127,17 @@ public class Pelear extends SearchAction{
 					charmander.setEnergiaActual(energia);
 					charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
 					charmander.setPuedeMoverse(true);
+					charmander.incrementarContadoresAtaques();
+					
+					charmander.evaluarSubirDeNivel();
 					
 					pokemonState.setCharmander(charmander);
 					pokemonState.vencerPokemonFinal(boss, nodoActual);
 					
 					pokemonEnvironmentState.setCharmander(charmander);
 					pokemonEnvironmentState.vencerPokemonFinal(boss, nodoActual);
+				
+					
 					
 					return pokemonEnvironmentState;
 				}

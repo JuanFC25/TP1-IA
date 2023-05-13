@@ -33,6 +33,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 					Integer energia = (int) (charmander.getEnergiaActual() - (enemigo.getEnergia()/4));
 					charmander.setEnergiaActual(energia);
 					charmander.setPuedeMoverse(true);
+					charmander.incrementarContadoresAtaques();
 					
 					pokemonState.setCharmander(charmander);
 					
@@ -48,6 +49,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 					Integer energia = (int) (charmander.getEnergiaActual() - (boss.getEnergia()/4));
 					charmander.setEnergiaActual(energia);
 					charmander.setPuedeMoverse(true);
+					charmander.incrementarContadoresAtaques();
 					
 					pokemonState.setCharmander(charmander);
 					
@@ -86,6 +88,9 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 					Integer energia = (int) (charmander.getEnergiaActual() - (enemigo.getEnergia()/4));
 					charmander.setEnergiaActual(energia);
 					charmander.setPuedeMoverse(true);
+					charmander.incrementarContadoresAtaques();
+					
+					
 					pokemonState.setCharmander(charmander);
 					
 					pokemonEnvironmentState.setCharmander(charmander);
@@ -98,6 +103,8 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 					Integer energia = (int) (charmander.getEnergiaActual() - (boss.getEnergia()/4));
 					charmander.setEnergiaActual(energia);
 					charmander.setPuedeMoverse(true);
+					charmander.incrementarContadoresAtaques();
+					
 					pokemonState.setCharmander(charmander);
 					
 					pokemonEnvironmentState.setCharmander(charmander);

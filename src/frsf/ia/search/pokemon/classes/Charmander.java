@@ -1,8 +1,14 @@
 package frsf.ia.search.pokemon.classes;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
+/**
+ * @author juank
+ *
+ */
 public class Charmander {
 
 	
@@ -12,15 +18,16 @@ public class Charmander {
 	private Integer cantidadAdversarios;
 	private Integer nivel;
 	private Boolean puedeMoverse;
-	private Map<Integer, List<Integer>> ataquesDisponibles; //clave(es el numero de ataque), lista con porcentaje de energia que aumenta el ataque y cantidad de ciclos desde ultimo uso
-	
+	private Map<String, List<Integer>> ataquesDisponibles; //clave(es el nombre de ataque), lista con porcentaje de energia que aumenta el ataque y cantidad de ciclos desde ultimo uso
+	private List<AtaqueEspecial> listaAtaquesEspeciales;
 	
 	
 	public Charmander() {
 		super();
+		setListaAtaquesEspeciales();
 	}
 	public Charmander(Integer posicion, Integer energiaActual, Integer energiaInicial, Integer cantidadAdversarios,
-			Integer nivel, Map<Integer, List<Integer>> ataquesDisponibles) {
+			Integer nivel, Map<String, List<Integer>> ataquesDisponibles) {
 		super();
 		this.posicion = posicion;
 		this.energiaActual = energiaActual;
@@ -29,9 +36,10 @@ public class Charmander {
 		this.nivel = nivel;
 		this.ataquesDisponibles = ataquesDisponibles;
 		this.puedeMoverse = true;
+		setListaAtaquesEspeciales();
 	}
 	public Charmander(Integer posicion2, Integer energiaActual2, Integer energiaInicial2, Integer cantidadAdversarios2,
-			Integer nivel2, Map<Integer, List<Integer>> ataquesDisponibles2, Boolean puedeMoverse2) {
+			Integer nivel2, Map<String, List<Integer>> ataquesDisponibles2, Boolean puedeMoverse2) {
 		super();
 		this.posicion = posicion2;
 		this.energiaActual = energiaActual2;
@@ -40,6 +48,7 @@ public class Charmander {
 		this.nivel = nivel2;
 		this.ataquesDisponibles = ataquesDisponibles2;
 		this.puedeMoverse = puedeMoverse2;
+		setListaAtaquesEspeciales();
 	}
 	public Integer getPosicion() {
 		return posicion;
@@ -71,10 +80,10 @@ public class Charmander {
 	public void setNivel(Integer nivel) {
 		this.nivel = nivel;
 	}
-	public Map<Integer, List<Integer>> getAtaquesDisponibles() {
+	public Map<String, List<Integer>> getAtaquesDisponibles() {
 		return ataquesDisponibles;
 	}
-	public void setAtaquesDisponibles(Map<Integer, List<Integer>> ataquesDisponibles) {
+	public void setAtaquesDisponibles(Map<String, List<Integer>> ataquesDisponibles) {
 		this.ataquesDisponibles = ataquesDisponibles;
 	}
 	
@@ -87,8 +96,65 @@ public class Charmander {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "CHARMANDER[pos, energia, nivel]: " + "[" + posicion + ", " + energiaActual + ", " + nivel  +" ]";
+		return "CHARMANDER[pos, energia, nivel, puedeMoverse]: " + "[" + posicion + ", " + energiaActual + ", " + nivel  + ", " + puedeMoverse + " ]";
 	}
 	
+
+	
+	
+	public void evaluarSubirDeNivel() {
+        Integer energia = this.getEnergiaActual();
+        Integer energiaInicial = this.getEnergiaInicial();
+        
+        switch (getNivel()) {
+        case 1: {
+            if(energia >= energiaInicial * 1.25) {
+          
+                this.ataquesDisponibles.put(listaAtaquesEspeciales.get(0).getNombre(), List.of(listaAtaquesEspeciales.get(0).getPorcentajeAumentoEnergia(),3));
+                this.setNivel(2);
+                System.out.println("Subio al nivel 2"); 
+            }
+        }
+        case 2: {
+            if(energia >= energiaInicial * 1.75) {
+            	this.ataquesDisponibles.put(listaAtaquesEspeciales.get(1).getNombre(), List.of(listaAtaquesEspeciales.get(1).getPorcentajeAumentoEnergia(),3));
+                this.setNivel(3);
+                System.out.println("Subio al nivel 3");
+            }
+        }
+        case 3: {
+            if(energia >= energiaInicial * 2.2) {
+            	this.ataquesDisponibles.put(listaAtaquesEspeciales.get(2).getNombre(), List.of(listaAtaquesEspeciales.get(2).getPorcentajeAumentoEnergia(),3));
+                this.setNivel(4);
+                System.out.println("Subio al nivel 4");
+    
+            }
+        }
+        }
+        
+    }
+	public List<AtaqueEspecial> getListaAtaquesEspeciales() {
+		return listaAtaquesEspeciales;
+	}
+	public void setListaAtaquesEspeciales() {
+		AtaqueEspecial ataque1 = new AtaqueEspecial(2, 20, "Scary Face");
+		AtaqueEspecial ataque2 = new AtaqueEspecial(3, 30, "Slash");
+		AtaqueEspecial ataque3 = new AtaqueEspecial(4, 50, "Fire Fang");
+		listaAtaquesEspeciales = new ArrayList<>();
+		listaAtaquesEspeciales.add(ataque1);
+		listaAtaquesEspeciales.add(ataque2);
+		listaAtaquesEspeciales.add(ataque3);
+	}
+	public void reiniciarContador(String ataque) {
+		ataquesDisponibles.replace(ataque,List.of(ataquesDisponibles.get(ataque).get(0), 0));
+	}
+
+	
+	public void incrementarContadoresAtaques() {
+		Set<String> ataques = this.getAtaquesDisponibles().keySet();
+		for (String ataque : ataques) {
+			ataquesDisponibles.replace(ataque,List.of(ataquesDisponibles.get(ataque).get(0), ataquesDisponibles.get(ataque).get(1) + 1));
+		}
+	}
 	
 }
