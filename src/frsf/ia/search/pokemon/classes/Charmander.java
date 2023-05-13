@@ -18,14 +18,17 @@ public class Charmander {
 	private Integer cantidadAdversarios;
 	private Integer nivel;
 	private Boolean puedeMoverse;
+
 	private Map<String, List<Integer>> ataquesDisponibles; //clave(es el nombre de ataque), lista con porcentaje de energia que aumenta el ataque y cantidad de ciclos desde ultimo uso
 	private List<AtaqueEspecial> listaAtaquesEspeciales;
+
 	
 	
 	public Charmander() {
 		super();
 		setListaAtaquesEspeciales();
 	}
+	
 	public Charmander(Integer posicion, Integer energiaActual, Integer energiaInicial, Integer cantidadAdversarios,
 			Integer nivel, Map<String, List<Integer>> ataquesDisponibles) {
 		super();
@@ -38,51 +41,69 @@ public class Charmander {
 		this.puedeMoverse = true;
 		setListaAtaquesEspeciales();
 	}
-	public Charmander(Integer posicion2, Integer energiaActual2, Integer energiaInicial2, Integer cantidadAdversarios2,
-			Integer nivel2, Map<String, List<Integer>> ataquesDisponibles2, Boolean puedeMoverse2) {
+
+	
+	public Charmander(Integer posicion, Integer energiaActual, Integer energiaInicial, Integer cantidadAdversarios,
+			Integer nivel, Map<String, List<Integer>> ataquesDisponibles, Boolean puedeMoverse) {
 		super();
-		this.posicion = posicion2;
-		this.energiaActual = energiaActual2;
-		this.energiaInicial = energiaInicial2;
-		this.cantidadAdversarios = cantidadAdversarios2;
-		this.nivel = nivel2;
-		this.ataquesDisponibles = ataquesDisponibles2;
-		this.puedeMoverse = puedeMoverse2;
+		this.posicion = posicion;
+		this.energiaActual = energiaActual;
+		this.energiaInicial = energiaInicial;
+		this.cantidadAdversarios = cantidadAdversarios;
+		this.nivel = nivel;
+		this.ataquesDisponibles = ataquesDisponibles;
+		this.puedeMoverse = puedeMoverse;
 		setListaAtaquesEspeciales();
+
 	}
+	
 	public Integer getPosicion() {
 		return posicion;
 	}
+	
 	public void setPosicion(Integer posicion) {
 		this.posicion = posicion;
 	}
+	
 	public Integer getEnergiaActual() {
 		return energiaActual;
 	}
+	
 	public void setEnergiaActual(Integer energiaActual) {
 		this.energiaActual = energiaActual;
 	}
+	
 	public Integer getEnergiaInicial() {
 		return energiaInicial;
 	}
+	
 	public void setEnergiaInicial(Integer energiaInicial) {
 		this.energiaInicial = energiaInicial;
 	}
+	
 	public Integer getCantidadAdversarios() {
 		return cantidadAdversarios;
 	}
+	
 	public void setCantidadAdversarios(Integer cantidadAdversarios) {
 		this.cantidadAdversarios = cantidadAdversarios;
 	}
+	
 	public Integer getNivel() {
 		return nivel;
 	}
+	
 	public void setNivel(Integer nivel) {
 		this.nivel = nivel;
 	}
+
 	public Map<String, List<Integer>> getAtaquesDisponibles() {
 		return ataquesDisponibles;
 	}
+
+	
+
+
 	public void setAtaquesDisponibles(Map<String, List<Integer>> ataquesDisponibles) {
 		this.ataquesDisponibles = ataquesDisponibles;
 	}
@@ -90,9 +111,11 @@ public class Charmander {
 	public Boolean getPuedeMoverse() {
 		return puedeMoverse;
 	}
+	
 	public void setPuedeMoverse(Boolean puedeMoverse) {
 		this.puedeMoverse = puedeMoverse;
 	}
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
@@ -150,11 +173,12 @@ public class Charmander {
 	}
 
 	
+
 	public void incrementarContadoresAtaques() {
 		Set<String> ataques = this.getAtaquesDisponibles().keySet();
 		for (String ataque : ataques) {
 			ataquesDisponibles.replace(ataque,List.of(ataquesDisponibles.get(ataque).get(0), ataquesDisponibles.get(ataque).get(1) + 1));
 		}
 	}
-	
+
 }
