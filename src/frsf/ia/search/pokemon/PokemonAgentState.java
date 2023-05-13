@@ -179,7 +179,9 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 
 
 	public boolean isInMasterPokemonPosition() {
-		if (getCharmander().getPosicion() == 5) {
+		//cambiar, no hardcodear
+		
+		if (getCharmander().getPosicion() == 20) {
 			return true;
 		}
 		else return false;

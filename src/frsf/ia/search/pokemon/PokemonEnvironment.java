@@ -77,5 +77,21 @@ public class PokemonEnvironment extends Environment {
 	}
 
 	
+	//no anda
+	@Override
+    public boolean agentFailed(Action actionReturned) {
+
+        PokemonEnvironmentState pokemonEnvironmentState =
+                this.getEnvironmentState();
+
+        int agentEnergy = pokemonEnvironmentState.getCharmander().getEnergiaActual();
+
+        // FIXME: The pacman agent always has the same energy
+        // If the agent has no energy, he failed
+        if (agentEnergy <= 0)
+            return true;
+
+        return false;
+    }
 	
 }
