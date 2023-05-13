@@ -29,13 +29,14 @@ public class Pelear extends SearchAction{
 		if((Integer) mapaAgente.get(charmander.getPosicion()).get(2) == PokemonPerception.ENEMIGO_PERCEPTION) {
 			Enemigo enemigo = ((Enemigo) mapaAgente.get(charmander.getPosicion()).get(1));
 			if( charmander.getEnergiaActual() >  enemigo.getEnergia()) {
-				pokemonState.eliminarEnemigo(nodoActual);
+				//pokemonState.eliminarEnemigo(nodoActual);
 				Integer energia = (int) (charmander.getEnergiaActual() - enemigo.getEnergia() + enemigo.getEnergia() * 0.2);
 				charmander.setEnergiaActual(energia);
 				charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
 				charmander.setPuedeMoverse(true);
 				
 				pokemonState.setCharmander(charmander);
+				
 				
 				//hacer subir de nivel
 				//hacer contadores para ataques
