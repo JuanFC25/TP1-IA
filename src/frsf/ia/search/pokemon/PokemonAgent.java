@@ -17,6 +17,7 @@ import frsf.cidisi.faia.solver.search.Search;
 import frsf.ia.search.pokemon.actions.IrAN;
 import frsf.ia.search.pokemon.actions.NoPelear;
 import frsf.ia.search.pokemon.actions.Pelear;
+import frsf.ia.search.pokemon.actions.PelearConAtaqueEspecial;
 import frsf.ia.search.pokemon.actions.RecogerEnergiaPokebola;
 
 
@@ -34,6 +35,7 @@ public class PokemonAgent extends SearchBasedAgent{
 		Vector<SearchAction> operators = new Vector<SearchAction>();
 		operators.add(new Pelear());
 		operators.add(new NoPelear());
+		operators.add(new PelearConAtaqueEspecial());
 		operators.add(new RecogerEnergiaPokebola());
 		for(int i=1; i<=5 ;  i++) {
 			operators.add(new IrAN(i));

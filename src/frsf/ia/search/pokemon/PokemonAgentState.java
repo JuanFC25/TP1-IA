@@ -10,6 +10,7 @@ import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.ia.search.pokemon.classes.AtaqueEspecial;
 import frsf.ia.search.pokemon.classes.Charmander;
+import frsf.ia.search.pokemon.classes.Enemigo;
 import frsf.ia.search.pokemon.classes.PokemonMaestro;
 
 public class PokemonAgentState  extends SearchBasedAgentState{
@@ -18,7 +19,7 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	//Primer elemento nodos adyacentes, Segundo elemento objeto que hay en el nodo, Tercer elemento la percepcion
 	private Map<Integer, List<Object>> mapaAgente; //igual que en ambiente, es la representacion interna del agente
 	private List<AtaqueEspecial> listaAtaquesEspeciales;
-	
+	public Integer cantidadMovimientosSinPerderEnergia;
 	
 	public final static Integer VACIO = 1000;
 	private Boolean vencioPokemonMaestro = false;
@@ -52,7 +53,8 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		Map<Integer, List<Object>> mapaAgenteObj = ((PokemonAgentState) obj).getMapaAgente();
 		Charmander charmanderObj = ((PokemonAgentState) obj).getCharmander();
 		
-		if(mapaAgenteObj.equals(this.mapaAgente) && charmanderObj.equals(this.charmander)) return true;
+		if(mapaAgenteObj.equals(this.mapaAgente) && charmanderObj.equals(this.charmander)
+				&& ((PokemonAgentState) obj).cantidadMovimientosSinPerderEnergia == this.cantidadMovimientosSinPerderEnergia) return true;
 		
 		return false;
 	}
@@ -65,12 +67,14 @@ public class PokemonAgentState  extends SearchBasedAgentState{
      */
 	@Override
 	public SearchBasedAgentState clone() {
-		Map<Integer, List<Object>> newMapaAgente = this.mapaAgente;
+		Map<Integer, List<Object>> newMapaAgente = new HashMap<>();
+				newMapaAgente.putAll(this.mapaAgente);;
 		Charmander newCharmander = new Charmander(charmander.getPosicion(), charmander.getEnergiaActual(),
 				charmander.getEnergiaInicial(), charmander.getCantidadAdversarios(), charmander.getNivel(), charmander.getAtaquesDisponibles(), charmander.getPuedeMoverse());
 		
 		
 		PokemonAgentState newState = new PokemonAgentState(newCharmander, newMapaAgente);
+		newState.cantidadMovimientosSinPerderEnergia = this.cantidadMovimientosSinPerderEnergia;
 		return newState;
 	}
 
@@ -129,7 +133,7 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		vencioPokemonMaestro = false;
 		mapaAgente = inicializarMapa();
 		charmander = new Charmander(1,20,20,2,1, null);
-		
+		cantidadMovimientosSinPerderEnergia = 0;
 		
 		AtaqueEspecial ataque1 = new AtaqueEspecial(2, 20, "Scary Face");
 		AtaqueEspecial ataque2 = new AtaqueEspecial(3, 30, "Slash");
@@ -194,15 +198,6 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 
 
 
-	public void modificarPosicionCharmander(Integer nodoActual, Charmander charmander2) {
-		this.mapaAgente.replace(nodoActual, List.of(mapaAgente.get(nodoActual).get(0),VACIO ,mapaAgente.get(nodoActual).get(2)));
-		
-		Integer nodoNuevo = charmander2.getPosicion();
-		
-		this.mapaAgente.replace(nodoNuevo, List.of(mapaAgente.get(nodoNuevo).get(0),charmander2 ,mapaAgente.get(nodoNuevo).get(2)));
-		
-	}
-
 
 
 
@@ -219,7 +214,7 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		return !vencioPokemonMaestro;
 	}
 
-
+/*
 	public void evaluarSubirDeNivel() {
 		
 		Integer energia = this.charmander.getEnergiaActual();
@@ -227,30 +222,41 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		switch (this.charmander.getNivel()) {
 		case 1: {
 			if(energia >= energiaInicial * 1.25) {
-				charmander.();
-				nivel = 2;
+				charmander.agregarAtaqueEspecial(this.listaAtaquesEspeciales.get(0));
+				charmander.setNivel(2);
 			}
 		}
 		case 2: {
 			if(energia >= energiaInicial * 1.75) {
-				ataquesDisponibles.put("Ataque 2", 0);
-				nivel = 3;
+				charmander.agregarAtaqueEspecial(this.listaAtaquesEspeciales.get(1));
+				charmander.setNivel(2);
 			}
 		}
 		case 3: {
 			if(energia >= energiaInicial * 2.2) {
-				ataquesDisponibles.put("Ataque 3", 0);
-				nivel = 4;
+				charmander.agregarAtaqueEspecial(this.listaAtaquesEspeciales.get(2));
+				charmander.setNivel(2);
 			}
 		}
 		}
 	}
+
+*/	
+	
+	
 
 
 	public void vencerPokemonFinal(PokemonMaestro boss, Integer nodoActual) {
 		//seteo la condicion en el pokemon maestro para que se cumpla el goal
 		this.mapaAgente.replace(nodoActual, List.of(mapaAgente.get(nodoActual).get(0), boss, mapaAgente.get(nodoActual).get(2)));
 		this.vencioPokemonMaestro = true;
+	}
+
+
+
+
+	public void eliminarPokebola(Integer nodo) {
+		mapaAgente.replace(nodo, List.of(mapaAgente.get(nodo).get(0), VACIO,  PokemonPerception.EMPTY_PERCEPTION));
 	}
 
 	
