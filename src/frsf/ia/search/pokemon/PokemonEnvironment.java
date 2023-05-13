@@ -39,7 +39,7 @@ public class PokemonEnvironment extends Environment {
 		PokemonPerception perception = new PokemonPerception();
 		
 		Integer posicion = getEnvironmentState().getCharmander().getPosicion();
-		
+
 		perception.setMapaMundial(this.getMapaMundial());
 		
 		perception.setNodosAdyacentes(this.getNodosAdyacentes(posicion));
@@ -52,21 +52,6 @@ public class PokemonEnvironment extends Environment {
 	}
 
 	
-	@Override
-    public boolean agentFailed(Action actionReturned) {
-
-        PokemonEnvironmentState pokemonEnvironmentState =
-                this.getEnvironmentState();
-
-        int agentEnergy = pokemonEnvironmentState.getCharmander().getEnergiaActual();
-
-
-        if (agentEnergy < 1)
-            return true;
-
-        return false;
-    }
-
 	
 	private Charmander getCharmander() {
 		return ((PokemonEnvironmentState) this.environmentState).getCharmander();

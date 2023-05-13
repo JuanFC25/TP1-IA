@@ -135,21 +135,21 @@ public class Charmander {
           
                 this.ataquesDisponibles.put(listaAtaquesEspeciales.get(0).getNombre(), List.of(listaAtaquesEspeciales.get(0).getPorcentajeAumentoEnergia(),3));
                 this.setNivel(2);
-                System.out.println("Subio al nivel 2"); 
+  
             }
         }
         case 2: {
             if(energia >= energiaInicial * 1.75) {
             	this.ataquesDisponibles.put(listaAtaquesEspeciales.get(1).getNombre(), List.of(listaAtaquesEspeciales.get(1).getPorcentajeAumentoEnergia(),3));
                 this.setNivel(3);
-                System.out.println("Subio al nivel 3");
+          
             }
         }
         case 3: {
             if(energia >= energiaInicial * 2.2) {
             	this.ataquesDisponibles.put(listaAtaquesEspeciales.get(2).getNombre(), List.of(listaAtaquesEspeciales.get(2).getPorcentajeAumentoEnergia(),3));
                 this.setNivel(4);
-                System.out.println("Subio al nivel 4");
+               
     
             }
         }

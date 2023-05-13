@@ -77,9 +77,13 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	@Override
 	public SearchBasedAgentState clone() {
 		Map<Integer, List<Object>> newMapaAgente = new HashMap<>();
-				newMapaAgente.putAll(this.mapaAgente);;
+				newMapaAgente.putAll(this.mapaAgente);
+				
+		Map<String, List<Integer>>	newAtaquesEspeciales = new HashMap<>();
+		newAtaquesEspeciales.putAll(this.charmander.getAtaquesDisponibles());
+				
 		Charmander newCharmander = new Charmander(charmander.getPosicion(), charmander.getEnergiaActual(),
-				charmander.getEnergiaInicial(), charmander.getCantidadAdversarios(), charmander.getNivel(), charmander.getAtaquesDisponibles(), charmander.getPuedeMoverse());
+				charmander.getEnergiaInicial(), charmander.getCantidadAdversarios(), charmander.getNivel(), newAtaquesEspeciales, charmander.getPuedeMoverse());
 		
 		
 		PokemonAgentState newState = new PokemonAgentState(newCharmander, newMapaAgente);
