@@ -37,22 +37,21 @@ public class IrAN extends SearchAction{
 		
 		List<Integer> nodosAdyacentes = (List<Integer>) pokemonState.getMapaAgente().get(nodoActual).get(0);
 		
-		//primero pregunto si puede moverse, ya que si se movio antes debe hacer otra accion salvo que el nodo este vacio
-		if(charmander.getPuedeMoverse() ||((int) (pokemonState.getMapaAgente().get(nodoActual).get(2))) == PokemonPerception.EMPTY_PERCEPTION) {
-			if(nodosAdyacentes != null && nodosAdyacentes.contains(nodo)) {
-				charmander.setPosicion(nodo);
-				charmander.setPuedeMoverse(false);
-				pokemonState.setCharmander(charmander);
-				
-				//pokemonState.modificarPosicionCharmander(nodoActual, charmander); //metodo que actualiza la posicion de charmander en pokemon Agent State
-				//ver si sirve
-				
-				return pokemonState;
+		if (charmander.getEnergiaActual() > 0) {         // se fija si el pokemon agente esta vivo
+			//primero pregunto si puede moverse, ya que si se movio antes debe hacer otra accion salvo que el nodo este vacio
+			if(charmander.getPuedeMoverse() ||((int) (pokemonState.getMapaAgente().get(nodoActual).get(2))) == PokemonPerception.EMPTY_PERCEPTION) {
+				if(nodosAdyacentes != null && nodosAdyacentes.contains(nodo)) {
+					charmander.setPosicion(nodo);
+					charmander.setPuedeMoverse(false);
+					pokemonState.setCharmander(charmander);
+					
+					//pokemonState.modificarPosicionCharmander(nodoActual, charmander); //metodo que actualiza la posicion de charmander en pokemon Agent State
+					//ver si sirve
+					
+					return pokemonState;
+				}
 			}
 		}
-		
-		
-		
 		return null;
 	}
 
@@ -72,23 +71,27 @@ public class IrAN extends SearchAction{
 		
 		List<Integer> nodosAdyacentes = (List<Integer>) pokemonEnvironmentState.getMapaMundial().get(nodoActual).get(0);
 		
-		if(charmander.getPuedeMoverse() ||((int) (pokemonEnvironmentState.getMapaMundial().get(nodoActual).get(2))) == PokemonPerception.EMPTY_PERCEPTION) {
-			if(nodosAdyacentes != null && nodosAdyacentes.contains(nodo)) {
-				charmander.setPosicion(nodo);
-				pokemonState.setCharmander(charmander);
-				charmander.setPuedeMoverse(false);
-				//ver si sirve
-				//pokemonState.modificarPosicionCharmander(nodoActual, charmander);
 		
-				
-				pokemonEnvironmentState.setCharmander(charmander);
-				//ver si sirve
-				//pokemonEnvironmentState.modificarPosicionCharmander(nodoActual, charmander);
-				
-				return pokemonEnvironmentState;
+		if (charmander.getEnergiaActual() > 0) {         // se fija si el pokemon agente esta vivo
+			if(charmander.getPuedeMoverse() ||((int) (pokemonEnvironmentState.getMapaMundial().get(nodoActual).get(2))) == PokemonPerception.EMPTY_PERCEPTION) {
+				if(nodosAdyacentes != null && nodosAdyacentes.contains(nodo)) {
+					charmander.setPosicion(nodo);
+					pokemonState.setCharmander(charmander);
+					charmander.setPuedeMoverse(false);
+					//ver si sirve
+					//pokemonState.modificarPosicionCharmander(nodoActual, charmander);
+			
+					
+					pokemonEnvironmentState.setCharmander(charmander);
+					//ver si sirve
+					//pokemonEnvironmentState.modificarPosicionCharmander(nodoActual, charmander);
+					
+					return pokemonEnvironmentState;
+				}
+					
 			}
-				
 		}
+		
 	
 		return null;
 	}

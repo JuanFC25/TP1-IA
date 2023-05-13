@@ -26,45 +26,50 @@ public class Pelear extends SearchAction{
 		Integer nodoActual = charmander.getPosicion();
 		Map<Integer, List<Object>> mapaAgente = pokemonState.getMapaAgente();
 		
-		if((Integer) mapaAgente.get(charmander.getPosicion()).get(2) == PokemonPerception.ENEMIGO_PERCEPTION) {
-			Enemigo enemigo = ((Enemigo) mapaAgente.get(charmander.getPosicion()).get(1));
-			if( charmander.getEnergiaActual() >  enemigo.getEnergia()) {
-				//pokemonState.eliminarEnemigo(nodoActual);
-				Integer energia = (int) (charmander.getEnergiaActual() - enemigo.getEnergia() + enemigo.getEnergia() * 0.2);
-				charmander.setEnergiaActual(energia);
-				charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
-				charmander.setPuedeMoverse(true);
-				
-				pokemonState.setCharmander(charmander);
-				
-				
-				//hacer subir de nivel
-				//hacer contadores para ataques
-				
-				//ver que pasa si lo unico que se ejecuta es ir a n
-				
-				return pokemonState;
-			}
-		} else if ((Integer) mapaAgente.get(charmander.getPosicion()).get(2) == PokemonPerception.POKEMON_MAESTRO_PERCEPTION){
-			PokemonMaestro boss = ((PokemonMaestro) mapaAgente.get(charmander.getPosicion()).get(1));
-			if( charmander.getEnergiaActual() >  boss.getEnergia()) {
-				
-				Integer energia = (int) (charmander.getEnergiaActual() - boss.getEnergia() + boss.getEnergia() * 0.2);
-				charmander.setEnergiaActual(energia);
-				charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
-				charmander.setPuedeMoverse(true);
-				
-				pokemonState.setCharmander(charmander);
-				pokemonState.vencerPokemonFinal(boss, nodoActual);
 		
-				//hacer subir de nivel
-				//hacer contadores para ataques
-				
-				//ver que pasa si lo unico que se ejecuta es ir a n
-				
-				return pokemonState;
+		if (charmander.getEnergiaActual() > 0) {         // se fija si el pokemon agente esta vivo
+			if((Integer) mapaAgente.get(charmander.getPosicion()).get(2) == PokemonPerception.ENEMIGO_PERCEPTION) {
+				Enemigo enemigo = ((Enemigo) mapaAgente.get(charmander.getPosicion()).get(1));
+				if( charmander.getEnergiaActual() >  enemigo.getEnergia()) {
+					//pokemonState.eliminarEnemigo(nodoActual);
+					Integer energia = (int) (charmander.getEnergiaActual() - enemigo.getEnergia() + enemigo.getEnergia() * 0.2);
+					charmander.setEnergiaActual(energia);
+					charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
+					charmander.setPuedeMoverse(true);
+					
+					pokemonState.setCharmander(charmander);
+					
+					
+					//hacer subir de nivel
+					//hacer contadores para ataques
+					
+					//ver que pasa si lo unico que se ejecuta es ir a n
+					
+					return pokemonState;
+				}
+			} else if ((Integer) mapaAgente.get(charmander.getPosicion()).get(2) == PokemonPerception.POKEMON_MAESTRO_PERCEPTION){
+				PokemonMaestro boss = ((PokemonMaestro) mapaAgente.get(charmander.getPosicion()).get(1));
+				if( charmander.getEnergiaActual() >  boss.getEnergia()) {
+					
+					Integer energia = (int) (charmander.getEnergiaActual() - boss.getEnergia() + boss.getEnergia() * 0.2);
+					charmander.setEnergiaActual(energia);
+					charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
+					charmander.setPuedeMoverse(true);
+					
+					pokemonState.setCharmander(charmander);
+					pokemonState.vencerPokemonFinal(boss, nodoActual);
+			
+					//hacer subir de nivel
+					//hacer contadores para ataques
+					
+					//ver que pasa si lo unico que se ejecuta es ir a n
+					
+					return pokemonState;
+				}
 			}
 		}
+		
+		
 		
 		return null;
 	}
@@ -84,45 +89,46 @@ public class Pelear extends SearchAction{
 		Integer nodoActual = charmander.getPosicion();
 		Map<Integer, List<Object>> mapaAmbiente = pokemonEnvironmentState.getMapaMundial();
 		
-		if((Integer) mapaAmbiente.get(charmander.getPosicion()).get(2) == PokemonPerception.ENEMIGO_PERCEPTION) {
-			Enemigo enemigo = ((Enemigo) mapaAmbiente.get(charmander.getPosicion()).get(1));
-			if( charmander.getEnergiaActual() >  enemigo.getEnergia()) {
-				
-				Integer energia = (int) (charmander.getEnergiaActual() - enemigo.getEnergia() + enemigo.getEnergia() * 0.2);
-				charmander.setEnergiaActual(energia);
-				charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
-				charmander.setPuedeMoverse(true);
-				
-				pokemonState.eliminarEnemigo(nodoActual);
-				pokemonState.setCharmander(charmander);
-				
-				pokemonEnvironmentState.eliminarEnemigo(nodoActual);
-				pokemonEnvironmentState.setCharmander(charmander);
-				
-				return pokemonEnvironmentState;
-			}
-		} else if((Integer) mapaAmbiente.get(charmander.getPosicion()).get(2) == PokemonPerception.POKEMON_MAESTRO_PERCEPTION) {
-			PokemonMaestro boss = ((PokemonMaestro) mapaAmbiente.get(charmander.getPosicion()).get(1));
-			if( charmander.getEnergiaActual() >  boss.getEnergia()) {
-				boss.setEnergia(0);
-				
-				Integer energia = (int) (charmander.getEnergiaActual() - boss.getEnergia() + boss.getEnergia() * 0.2);
-				charmander.setEnergiaActual(energia);
-				charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
-				charmander.setPuedeMoverse(true);
-				
-				pokemonState.setCharmander(charmander);
-				pokemonState.vencerPokemonFinal(boss, nodoActual);
-				
-				pokemonEnvironmentState.setCharmander(charmander);
-				pokemonEnvironmentState.vencerPokemonFinal(boss, nodoActual);
-				
-				return pokemonEnvironmentState;
+		
+		if (charmander.getEnergiaActual() > 0) {         // se fija si el pokemon agente esta vivo
+			if((Integer) mapaAmbiente.get(charmander.getPosicion()).get(2) == PokemonPerception.ENEMIGO_PERCEPTION) {
+				Enemigo enemigo = ((Enemigo) mapaAmbiente.get(charmander.getPosicion()).get(1));
+				if( charmander.getEnergiaActual() >  enemigo.getEnergia()) {
+					
+					Integer energia = (int) (charmander.getEnergiaActual() - enemigo.getEnergia() + enemigo.getEnergia() * 0.2);
+					charmander.setEnergiaActual(energia);
+					charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
+					charmander.setPuedeMoverse(true);
+					
+					pokemonState.eliminarEnemigo(nodoActual);
+					pokemonState.setCharmander(charmander);
+					
+					pokemonEnvironmentState.eliminarEnemigo(nodoActual);
+					pokemonEnvironmentState.setCharmander(charmander);
+					
+					return pokemonEnvironmentState;
+				}
+			} else if((Integer) mapaAmbiente.get(charmander.getPosicion()).get(2) == PokemonPerception.POKEMON_MAESTRO_PERCEPTION) {
+				PokemonMaestro boss = ((PokemonMaestro) mapaAmbiente.get(charmander.getPosicion()).get(1));
+				if( charmander.getEnergiaActual() >  boss.getEnergia()) {
+					boss.setEnergia(0);
+					
+					Integer energia = (int) (charmander.getEnergiaActual() - boss.getEnergia() + boss.getEnergia() * 0.2);
+					charmander.setEnergiaActual(energia);
+					charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
+					charmander.setPuedeMoverse(true);
+					
+					pokemonState.setCharmander(charmander);
+					pokemonState.vencerPokemonFinal(boss, nodoActual);
+					
+					pokemonEnvironmentState.setCharmander(charmander);
+					pokemonEnvironmentState.vencerPokemonFinal(boss, nodoActual);
+					
+					return pokemonEnvironmentState;
+				}
 			}
 		}
-		
-		
-		
+	
 		return null;
 	}
 
