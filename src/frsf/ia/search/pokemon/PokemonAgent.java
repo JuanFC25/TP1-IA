@@ -13,7 +13,9 @@ import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.solver.search.BreathFirstSearch;
 import frsf.cidisi.faia.solver.search.DepthFirstSearch;
+import frsf.cidisi.faia.solver.search.IStepCostFunction;
 import frsf.cidisi.faia.solver.search.Search;
+import frsf.cidisi.faia.solver.search.UniformCostSearch;
 import frsf.ia.search.pokemon.actions.IrAN;
 import frsf.ia.search.pokemon.actions.NoPelear;
 import frsf.ia.search.pokemon.actions.Pelear;
@@ -56,9 +58,13 @@ public class PokemonAgent extends SearchBasedAgent{
     public Action selectAction() {
 
         // Create the search strategy
-        //DepthFirstSearch strategy = new DepthFirstSearch();
-        BreathFirstSearch strategy = new BreathFirstSearch();
-        /**
+         //DepthFirstSearch strategy = new DepthFirstSearch();
+        // BreathFirstSearch strategy = new BreathFirstSearch();
+    	
+    	 IStepCostFunction costFunction = new CostFunction();
+         UniformCostSearch strategy = new UniformCostSearch(costFunction);
+    	
+    	/**
          * Another search strategy examples:
          * 
          * Depth First Search:

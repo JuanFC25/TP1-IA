@@ -86,8 +86,7 @@ public class RecogerEnergiaPokebola extends SearchAction{
 
 	@Override
 	public String toString() {
-	
-		return "RECOJO POKEBOLA";
+		return "RECOGER ENERGIA POKEBOLA";
 	}
 	
 	

@@ -38,7 +38,6 @@ public class PokemonPerception extends Perception{
     
     
     
-    
     //esta no se usa nunca creo
     /**
      * This method is used to setup the perception.
@@ -112,29 +111,29 @@ public class PokemonPerception extends Perception{
 		for (Integer nodo: nodos) {
 			switch ((Integer)nodosAdyacentes.get(nodo).get(1)){
 			case 0: {
-				adyacentes = adyacentes + "Nodo N° " + nodo + " Contenido: VACIO  Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
+				adyacentes = adyacentes + "Nodo N° " + nodo + " - Contenido: VACÍO" + "\n"; //  Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
 				break;
 			}
 			case 3: {
 				Pokebola p =(Pokebola) nodosAdyacentes.get(nodo).get(0);
-				adyacentes = adyacentes + "Nodo N° " + nodo + " Contenido: " + p + "   Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
+				adyacentes = adyacentes + "Nodo N° " + nodo + " - Contenido: " + p + "\n"; //+ "   Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
 				break;
 			}
 			case 1: {
 				Enemigo e =(Enemigo) nodosAdyacentes.get(nodo).get(0);
-				adyacentes = adyacentes + "Nodo N° " + nodo +  " Contenido: " + e + "   Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
+				adyacentes = adyacentes + "Nodo N° " + nodo +  " - Contenido: " + e + "\n"; // + "   Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
 				break;
 			}
 			case 2: {
 				PokemonMaestro pm =(PokemonMaestro) nodosAdyacentes.get(nodo).get(0);
-				adyacentes = adyacentes + "Nodo N° " + nodo +  " Contenido: " + pm + "   Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
+				adyacentes = adyacentes + "Nodo N° " + nodo +  " - Contenido: " + pm + "\n"; //+ "   Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
 				break;
 			}
 			}
 		}
     	
 		return "\n" + "------------PERCEPCION------------"   + "\n"  +
-    			charmander.toString() + "\n" + "Nodos adyacentes(nodo, contenido, percepcion): "  + "\n" + adyacentes + "Se usa satelite: " + seUsaSatelite + "\n";
+    			charmander.toString() + "\n" + "Nodos adyacentes(nodo, contenido): "  + "\n" + adyacentes + "Se usa satelite: " + seUsaSatelite + "\n";
     			
     }
     
