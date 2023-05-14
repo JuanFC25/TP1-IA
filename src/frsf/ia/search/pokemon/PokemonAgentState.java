@@ -11,6 +11,7 @@ import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.ia.search.pokemon.classes.AtaqueEspecial;
 import frsf.ia.search.pokemon.classes.Charmander;
 import frsf.ia.search.pokemon.classes.Enemigo;
+import frsf.ia.search.pokemon.classes.Pokebola;
 import frsf.ia.search.pokemon.classes.PokemonMaestro;
 
 public class PokemonAgentState  extends SearchBasedAgentState{
@@ -128,13 +129,6 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	}
 
 	
-	/**
-     * This method returns the String representation of the agent state.
-     */
-	@Override
-	public String toString() {
-		return charmander.toString() + "\n" + "Mapa agente: " + mapaAgente;
-	}
 
 	
 	/**
@@ -221,6 +215,42 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 
 	public void eliminarPokebola(Integer nodo) {
 		mapaAgente.replace(nodo, List.of(mapaAgente.get(nodo).get(0), VACIO,  PokemonPerception.EMPTY_PERCEPTION));
+	}
+
+	
+	/**
+     * This method returns the String representation of the agent state.
+     */
+	@Override
+	public String toString() {
+String mapa = new String();
+		
+		Set<Integer> nodos = mapaAgente.keySet(); 
+		for (Integer nodo: nodos) {
+			switch ((Integer)mapaAgente.get(nodo).get(2)){
+			case 0: {
+				mapa = mapa + "Nodo N° " + nodo + " | Adyacencias: " + mapaAgente.get(nodo).get(0) + " Contenido: VACIO  Percepcion: " + mapaAgente.get(nodo).get(2) + "\n";
+				break;
+			}
+			case 3: {
+				Pokebola p =(Pokebola) mapaAgente.get(nodo).get(1);
+				mapa = mapa + "Nodo N° " + nodo + " | Adyacencias: " + mapaAgente.get(nodo).get(0) + " Contenido: " + p + "   Percepcion: " + mapaAgente.get(nodo).get(2) + "\n";
+				break;
+			}
+			case 1: {
+				Enemigo e =(Enemigo) mapaAgente.get(nodo).get(1);
+				mapa = mapa + "Nodo N° " + nodo + " | Adyacencias: " + mapaAgente.get(nodo).get(0) + " Contenido: " + e + "   Percepcion: " + mapaAgente.get(nodo).get(2) + "\n";
+				break;
+			}
+			case 2: {
+				PokemonMaestro pm =(PokemonMaestro) mapaAgente.get(nodo).get(1);
+				mapa = mapa + "Nodo N° " + nodo + " | Adyacencias: " + mapaAgente.get(nodo).get(0) + " Contenido: " + pm + "   Percepcion: " + mapaAgente.get(nodo).get(2) + "\n";
+				break;
+			}
+			}
+		}
+		return "\n" + "--------------AGENTE---------------" + "\n"
+				+ charmander.toString() + "\n" + "Mapa agente: " +  "\n" + mapa;
 	}
 
 	

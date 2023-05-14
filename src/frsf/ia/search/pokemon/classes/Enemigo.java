@@ -66,8 +66,7 @@ public class Enemigo {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "[Pokemon Enemigo(Id, pos, energia, ciclos): " + this.id + ", " + this.posicion + ", " + this.energia + ", " + this.cantidadCiclosSinMoverse + "]";
+		return "Pokemon Enemigo(Id, pos, energia): [" + this.id + ", " + this.posicion + ", " + this.energia  + "]";
 	}
 	
 	

@@ -10,6 +10,8 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 
+import javax.swing.text.StyledEditorKit.ForegroundAction;
+
 import frsf.cidisi.faia.state.EnvironmentState;
 import frsf.ia.search.pokemon.classes.AtaqueEspecial;
 import frsf.ia.search.pokemon.classes.Charmander;
@@ -47,9 +49,9 @@ public class PokemonEnvironmentState extends EnvironmentState{
 		Enemigo enemigo1 = new Enemigo(1, 2, 5, 0);
 		Enemigo enemigo2 = new Enemigo(2, 10, 10, 0);
 		
-		PokemonMaestro boss = new PokemonMaestro(7, 15);
+		PokemonMaestro boss = new PokemonMaestro(7, 30);
 		
-		Pokebola pokebola1 = new Pokebola(1, 8, 10);
+		Pokebola pokebola1 = new Pokebola(1, 8, 20);
 		
 		
 		//Pokebola pokebola2 = new Pokebola(2, 11, 10);
@@ -114,9 +116,36 @@ public class PokemonEnvironmentState extends EnvironmentState{
 	}
 
 	@Override
-	public String toString() {
-		return  "-----------------AMBIENTE-------------" + "\n" +
-				charmander.toString()  + "\n" + "Mapa Mundial: " + mapaMundial;
+	public String toString() {	
+		String mapa = new String();
+		
+		Set<Integer> nodos = mapaMundial.keySet(); 
+		for (Integer nodo: nodos) {
+			switch ((Integer)mapaMundial.get(nodo).get(2)){
+			case 0: {
+				mapa = mapa + "Nodo N° " + nodo + " | Adyacencias: " + mapaMundial.get(nodo).get(0) + " Contenido: VACIO  Percepcion: " + mapaMundial.get(nodo).get(2) + "\n";
+				break;
+			}
+			case 3: {
+				Pokebola p =(Pokebola) mapaMundial.get(nodo).get(1);
+				mapa = mapa + "Nodo N° " + nodo + " | Adyacencias: " + mapaMundial.get(nodo).get(0) + " Contenido: " + p + "   Percepcion: " + mapaMundial.get(nodo).get(2) + "\n";
+				break;
+			}
+			case 1: {
+				Enemigo e =(Enemigo) mapaMundial.get(nodo).get(1);
+				mapa = mapa + "Nodo N° " + nodo + " | Adyacencias: " + mapaMundial.get(nodo).get(0) + " Contenido: " + e + "   Percepcion: " + mapaMundial.get(nodo).get(2) + "\n";
+				break;
+			}
+			case 2: {
+				PokemonMaestro pm =(PokemonMaestro) mapaMundial.get(nodo).get(1);
+				mapa = mapa + "Nodo N° " + nodo + " | Adyacencias: " + mapaMundial.get(nodo).get(0) + " Contenido: " + pm + "   Percepcion: " + mapaMundial.get(nodo).get(2) + "\n";
+				break;
+			}
+			}
+		}
+		
+		return "\n" +  "-----------------AMBIENTE-------------" + "\n" +
+				charmander.toString()  + "\n" + "Mapa Mundial: " + "\n" + mapa;
 	}
 
 	
@@ -192,13 +221,7 @@ public class PokemonEnvironmentState extends EnvironmentState{
 			
 		}
 	}
-/*
-	public void modificarPosicionCharmander(Integer nodoActual, Charmander charmander2) {
-		this.mapaMundial.replace(nodoActual, List.of(mapaMundial.get(nodoActual).get(0),PokemonAgentState.VACIO ,mapaMundial.get(nodoActual).get(2)));
-		Integer nodoNuevo = charmander2.getPosicion();
-		this.mapaMundial.replace(nodoNuevo, List.of(mapaMundial.get(nodoNuevo).get(0),charmander2 ,mapaMundial.get(nodoNuevo).get(2)));
-	}
-	*/
+
 	
 	public void eliminarEnemigo(Integer nodo) {
 		mapaMundial.replace(nodo, List.of(mapaMundial.get(nodo).get(0), PokemonAgentState.VACIO,  PokemonPerception.EMPTY_PERCEPTION));

@@ -119,7 +119,8 @@ public class Charmander {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "CHARMANDER[pos, energia, nivel, puedeMoverse]: " + "[" + posicion + ", " + energiaActual + ", " + nivel  + ", " + puedeMoverse + " ]";
+		return "CHARMANDER(pos, energia, nivel, puedeMoverse): " + "[" + posicion + ", " + energiaActual + ", " + nivel  + ", " + puedeMoverse + "]" + "\n" +
+				"Ataques Disponibles: " + ataquesDisponibles;
 	}
 	
 
