@@ -2,11 +2,15 @@ package frsf.ia.search.pokemon;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
 import frsf.ia.search.pokemon.classes.Charmander;
+import frsf.ia.search.pokemon.classes.Enemigo;
+import frsf.ia.search.pokemon.classes.Pokebola;
+import frsf.ia.search.pokemon.classes.PokemonMaestro;
 
 public class PokemonPerception extends Perception{
 
@@ -98,7 +102,40 @@ public class PokemonPerception extends Perception{
 
 	@Override
     public String toString() {
-    	return charmander.toString() + "\n" + "Nodos adyacentes(nodo, contenido, percepcion): " + nodosAdyacentes;
+    	Boolean seUsaSatelite;
+    	if (mapaMundial == null) seUsaSatelite = false;
+    	else seUsaSatelite = true;
+    	
+    	String adyacentes = new String();
+		
+		Set<Integer> nodos = nodosAdyacentes.keySet(); 
+		for (Integer nodo: nodos) {
+			switch ((Integer)nodosAdyacentes.get(nodo).get(1)){
+			case 0: {
+				adyacentes = adyacentes + "Nodo N° " + nodo + " Contenido: VACIO  Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
+				break;
+			}
+			case 3: {
+				Pokebola p =(Pokebola) nodosAdyacentes.get(nodo).get(0);
+				adyacentes = adyacentes + "Nodo N° " + nodo + " Contenido: " + p + "   Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
+				break;
+			}
+			case 1: {
+				Enemigo e =(Enemigo) nodosAdyacentes.get(nodo).get(0);
+				adyacentes = adyacentes + "Nodo N° " + nodo +  " Contenido: " + e + "   Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
+				break;
+			}
+			case 2: {
+				PokemonMaestro pm =(PokemonMaestro) nodosAdyacentes.get(nodo).get(0);
+				adyacentes = adyacentes + "Nodo N° " + nodo +  " Contenido: " + pm + "   Percepcion: " + nodosAdyacentes.get(nodo).get(1) + "\n";
+				break;
+			}
+			}
+		}
+    	
+		return "\n" + "------------PERCEPCION------------"   + "\n"  +
+    			charmander.toString() + "\n" + "Nodos adyacentes(nodo, contenido, percepcion): "  + "\n" + adyacentes + "Se usa satelite: " + seUsaSatelite + "\n";
+    			
     }
     
 }

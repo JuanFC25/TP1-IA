@@ -50,7 +50,10 @@ public class AtaqueEspecial {
 		this.nombre = nombre;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return nombre;
+	}
 	
 	
 }

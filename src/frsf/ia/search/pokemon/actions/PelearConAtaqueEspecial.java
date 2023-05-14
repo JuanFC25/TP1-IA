@@ -18,6 +18,7 @@ import frsf.ia.search.pokemon.classes.PokemonMaestro;
 
 public class PelearConAtaqueEspecial extends SearchAction{
 
+	String ataqueUtilizado;
 	@Override
 	public SearchBasedAgentState execute(SearchBasedAgentState s) {
 PokemonAgentState pokemonState = (PokemonAgentState) s;
@@ -45,7 +46,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 							charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
 							charmander.setPuedeMoverse(true);
 							charmander.evaluarSubirDeNivel();
-							
+							ataqueUtilizado = ataque;
 							pokemonState.setCharmander(charmander);
 							
 							return pokemonState;
@@ -70,7 +71,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 							charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
 							charmander.setPuedeMoverse(true);
 							charmander.evaluarSubirDeNivel();
-							
+							ataqueUtilizado = ataque;
 						
 							pokemonState.setCharmander(charmander);
 							pokemonState.vencerPokemonFinal(boss, nodoActual);
@@ -122,6 +123,9 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 							charmander.setEnergiaActual(energia);
 							charmander.incrementarContadoresAtaques();
 							charmander.reiniciarContador(ataque);
+							
+							ataqueUtilizado = ataque; //es para mostrar el ataque que se utilizo
+							
 							charmander.setCantidadAdversarios(charmander.getCantidadAdversarios()-1);
 							charmander.setPuedeMoverse(true);
 							charmander.evaluarSubirDeNivel();
@@ -158,6 +162,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 							charmander.setPuedeMoverse(true);
 							charmander.evaluarSubirDeNivel();
 							
+							ataqueUtilizado = ataque; //es para mostrar el ataque que se utilizo
 							
 							
 							pokemonState.setCharmander(charmander);
@@ -179,7 +184,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "PELEO CON ATAQUE ESPECIAL";
+		return "PELEO CON ATAQUE ESPECIAL : Charmander utilizo " + ataqueUtilizado;
 	}
 
 	
