@@ -20,6 +20,8 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	//Primer elemento nodos adyacentes, Segundo elemento objeto que hay en el nodo, Tercer elemento la percepcion
 	private Map<Integer, List<Object>> mapaAgente; //igual que en ambiente, es la representacion interna del agente
 	private List<AtaqueEspecial> listaAtaquesEspeciales;
+	private Integer cantidadMovimientosTotales;
+	
 	public Integer cantidadMovimientosSinPerderEnergia;
 	
 	public final static Integer VACIO = 1000;
@@ -45,6 +47,8 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		listaAtaquesEspeciales.add(ataque1);
 		listaAtaquesEspeciales.add(ataque2);
 		listaAtaquesEspeciales.add(ataque3);
+		
+		cantidadMovimientosTotales=0;
 
 	}
 
@@ -142,6 +146,7 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	
 		charmander = new Charmander(1,20,20,2,1, null);
 		cantidadMovimientosSinPerderEnergia = 0;
+		cantidadMovimientosTotales = 0;
 		
 		AtaqueEspecial ataque1 = new AtaqueEspecial(2, 20, "Scary Face");
 		AtaqueEspecial ataque2 = new AtaqueEspecial(3, 30, "Slash");
@@ -253,5 +258,15 @@ String mapa = new String();
 				+ charmander.toString() + "\n" + "Mapa agente: " +  "\n" + mapa;
 	}
 
-	
+
+
+
+	public Integer getCantidadMovimientosTotales() {
+		return cantidadMovimientosTotales;
+	}
+
+	public void aumentarCantidadMovimientosTotales() {
+		this.cantidadMovimientosTotales += 1;
+	}
+
 }

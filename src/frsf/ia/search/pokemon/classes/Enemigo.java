@@ -66,7 +66,7 @@ public class Enemigo {
 	
 	@Override
 	public String toString() {
-		return "Pokemon Enemigo(Id, pos, energia): [" + this.id + ", " + this.posicion + ", " + this.energia  + "]";
+		return "Pokemon Enemigo(Id, posición, energía): [" + this.id + ", " + this.posicion + ", " + this.energia  + "]";
 	}
 	
 	

@@ -71,6 +71,6 @@ public class Pokebola {
 	
 	@Override
 	public String toString() {
-		return "Pokebola(id, pos, energia): ["+this.id + ", " + this.posicion + ", " + this.energia + "]";
+		return "Pokebola(Id, posición, energia): ["+this.id + ", " + this.posicion + ", " + this.energia + "]";
 	}
 }

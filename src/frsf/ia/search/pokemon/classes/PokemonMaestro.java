@@ -36,7 +36,7 @@ public class PokemonMaestro {
 	
 	@Override
 	public String toString() {
-		return "Pokemon Maestro(Pos, energia): [" + this.posicion + ", " + this.energia+ "]";
+		return "Pokemon Maestro(Posición, energia): [" + this.posicion + ", " + this.energia+ "]";
 	}
 	
 }

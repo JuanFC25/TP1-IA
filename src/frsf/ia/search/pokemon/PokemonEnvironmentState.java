@@ -49,7 +49,7 @@ public class PokemonEnvironmentState extends EnvironmentState{
 		Enemigo enemigo1 = new Enemigo(1, 2, 5, 0);
 		Enemigo enemigo2 = new Enemigo(2, 10, 10, 0);
 		
-		PokemonMaestro boss = new PokemonMaestro(7, 30);
+		PokemonMaestro boss = new PokemonMaestro(7, 35);
 		
 		Pokebola pokebola1 = new Pokebola(1, 8, 20);
 		
@@ -78,6 +78,7 @@ public class PokemonEnvironmentState extends EnvironmentState{
 		mapaMundial.put(1, List.of(List.of(2), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
 		//mapaMundial.put(2, List.of(List.of(1, 3, 10), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
 		mapaMundial.put(2, List.of(List.of(1, 3, 10), enemigo1, PokemonPerception.ENEMIGO_PERCEPTION));
+		//mapaMundial.put(2, List.of(List.of(1, 3, 10), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
 		mapaMundial.put(3, List.of(List.of(2, 4, 8), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
 		//mapaMundial.put(3, List.of(List.of(2, 4), enemigo1, PokemonPerception.ENEMIGO_PERCEPTION));
 		mapaMundial.put(4, List.of(List.of(3, 5, 6, 9), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));

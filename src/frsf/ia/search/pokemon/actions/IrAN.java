@@ -55,8 +55,8 @@ public class IrAN extends SearchAction{
 					charmander.incrementarContadoresAtaques();
 					pokemonState.setCharmander(charmander);
 					
-					//pokemonState.modificarPosicionCharmander(nodoActual, charmander); //metodo que actualiza la posicion de charmander en pokemon Agent State
-					//ver si sirve
+					pokemonState.aumentarCantidadMovimientosTotales();
+					
 					
 					return pokemonState;
 				}
@@ -88,13 +88,11 @@ public class IrAN extends SearchAction{
 					charmander.setPosicion(nodo);
 					charmander.setPuedeMoverse(false);
 					charmander.incrementarContadoresAtaques();
-					//ver si sirve
-					//pokemonState.modificarPosicionCharmander(nodoActual, charmander);
 			
 					pokemonState.setCharmander(charmander);
 					pokemonEnvironmentState.setCharmander(charmander);
-					//ver si sirve
-					//pokemonEnvironmentState.modificarPosicionCharmander(nodoActual, charmander);
+									
+					pokemonState.aumentarCantidadMovimientosTotales();
 					
 					return pokemonEnvironmentState;
 				}
