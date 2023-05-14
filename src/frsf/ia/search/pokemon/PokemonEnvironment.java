@@ -36,11 +36,32 @@ public class PokemonEnvironment extends Environment {
 	@Override
 	public Perception getPercept() {
 		
+		
 		PokemonPerception perception = new PokemonPerception();
 		
 		Integer posicion = getEnvironmentState().getCharmander().getPosicion();
 
-		perception.setMapaMundial(this.getMapaMundial());
+		Integer ciclosUltimouso = getEnvironmentState().getCantCiclosDesdeUltimoUsoSatelite();
+		Integer ciclosSatelite = getEnvironmentState().getCiclosSatelite();
+		
+		if(getEnvironmentState().getCiclosSinMoverseEnemigos() == 2) {
+			getEnvironmentState().moverEnemigos();
+			getEnvironmentState().setCiclosSinMoverseEnemigos(0);
+		} else {
+			getEnvironmentState().setCiclosSinMoverseEnemigos(getEnvironmentState().getCiclosSinMoverseEnemigos() + 1);
+		}
+		
+		if( ciclosUltimouso == ciclosSatelite ) {
+			getEnvironmentState().setCantCiclosDesdeUltimoUsoSatelite(0);
+			getEnvironmentState().setCiclosSatelite(getEnvironmentState().getNumeroRandom(5, 10));
+			perception.setMapaMundial(this.getMapaMundial());
+			
+		} else {
+			getEnvironmentState().setCantCiclosDesdeUltimoUsoSatelite(getEnvironmentState().getCantCiclosDesdeUltimoUsoSatelite() + 1);
+			perception.setMapaMundial(null);
+		}
+		
+		
 		
 		perception.setNodosAdyacentes(this.getNodosAdyacentes(posicion));
 

@@ -29,6 +29,7 @@ public class Pelear extends SearchAction{
 		
 		if (charmander.getEnergiaActual() > 0) {         // se fija si el pokemon agente esta vivo
 			if((Integer) mapaAgente.get(charmander.getPosicion()).get(2) == PokemonPerception.ENEMIGO_PERCEPTION) {
+
 				Enemigo enemigo = ((Enemigo) mapaAgente.get(charmander.getPosicion()).get(1));
 				if( charmander.getEnergiaActual() >  enemigo.getEnergia()) {
 					pokemonState.eliminarEnemigo(nodoActual);

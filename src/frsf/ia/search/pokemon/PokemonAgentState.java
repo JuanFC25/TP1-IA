@@ -143,8 +143,9 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	@Override
 	public void initState() {
 		// ver si hay que poner el mapa de nodos completos
+		mapaAgente = new HashMap<>();
 		vencioPokemonMaestro = false;
-		mapaAgente = inicializarMapa();
+	
 		charmander = new Charmander(1,20,20,2,1, null);
 		cantidadMovimientosSinPerderEnergia = 0;
 		
@@ -156,27 +157,7 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		listaAtaquesEspeciales.add(ataque2);
 		listaAtaquesEspeciales.add(ataque3);
 	}
-
-
-
-	private Map<Integer, List<Object>> inicializarMapa() {
-		Map<Integer, List<Object>>  mapa = new HashMap<Integer, List<Object>>();
-		mapa.put(1, List.of(List.of(2), VACIO, PokemonPerception.EMPTY_PERCEPTION));
-		mapa.put(2, List.of(List.of(1, 3, 10), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
-		mapa.put(3, List.of(List.of(2, 4), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
-		mapa.put(4, List.of(List.of(3, 5, 9), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
-		
-		PokemonMaestro boss = new PokemonMaestro(5,10);
-		//ver si esto es necesario o no
-		mapa.put(5, List.of(List.of(4), boss, PokemonPerception.POKEMON_MAESTRO_PERCEPTION));
-		
-		mapa.put(10, List.of(List.of(2, 9), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
-		
-		mapa.put(9, List.of(List.of(4, 10), VACIO, PokemonPerception.UNKNOWN_PERCEPTION));
-		return mapa;
-	}
-
-
+	
 
 	public boolean isInMasterPokemonPosition() {
 		//cambiar, no hardcodear
