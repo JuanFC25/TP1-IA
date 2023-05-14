@@ -57,7 +57,7 @@ public class PokemonAgent extends SearchBasedAgent{
 
         // Create the search strategy
         //DepthFirstSearch strategy = new DepthFirstSearch();
-       BreathFirstSearch strategy = new BreathFirstSearch();
+        BreathFirstSearch strategy = new BreathFirstSearch();
         /**
          * Another search strategy examples:
          * 

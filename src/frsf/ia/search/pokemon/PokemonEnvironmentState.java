@@ -6,6 +6,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+import java.util.concurrent.ThreadLocalRandom;
 
 import frsf.cidisi.faia.state.EnvironmentState;
 import frsf.ia.search.pokemon.classes.AtaqueEspecial;
@@ -18,9 +21,10 @@ public class PokemonEnvironmentState extends EnvironmentState{
 
 	private Map<Integer, List<Object>> mapaMundial;    // key(nodo): lista de objetos: Primer elemento nodos adyacentes, Segundo elemento objeto que hay en el nodo, Tercer elemento la percepcion
 	private Charmander charmander;
-	private Integer cantCiclosDesdeUltimoUsoSatelite;
+	public Integer cantCiclosDesdeUltimoUsoSatelite;
 	private List<AtaqueEspecial> listaAtaquesEspeciales;
-	
+	private Integer ciclosSinMoverseEnemigos;
+	private Integer ciclosSatelite;
 	
 	public PokemonEnvironmentState(Map<Integer, List<Object>> m) {
 	    mapaMundial = m;
@@ -41,12 +45,14 @@ public class PokemonEnvironmentState extends EnvironmentState{
 		this.charmander = new Charmander(1, 20, 20, 2, 1 , new HashMap<String, List<Integer>>());
 
 		Enemigo enemigo1 = new Enemigo(1, 2, 5, 0);
-		Enemigo enemigo2 = new Enemigo(2, 10, 50, 0);
+		Enemigo enemigo2 = new Enemigo(2, 10, 10, 0);
 		
-		PokemonMaestro boss = new PokemonMaestro(7, 35);
+		PokemonMaestro boss = new PokemonMaestro(7, 15);
 		
 		Pokebola pokebola1 = new Pokebola(1, 8, 10);
-		Pokebola pokebola2 = new Pokebola(2, 11, 10);
+		
+		
+		//Pokebola pokebola2 = new Pokebola(2, 11, 10);
 		
 		
 		/*
@@ -55,7 +61,10 @@ public class PokemonEnvironmentState extends EnvironmentState{
 		Pokebola pokebola5 = new Pokebola(5, 29, 10);
 		 */
 
-		cantCiclosDesdeUltimoUsoSatelite = 1;
+		ciclosSatelite = getNumeroRandom(5, 10);
+		
+		cantCiclosDesdeUltimoUsoSatelite = ciclosSatelite;
+		ciclosSinMoverseEnemigos = 0;
 		mapaMundial = new HashMap<Integer, List<Object>>();
 		
 		//falta inicializar Ataques especiales
@@ -142,15 +151,47 @@ public class PokemonEnvironmentState extends EnvironmentState{
 			
 			if( getMapaMundial().get(nodo).get(1) != PokemonAgentState.VACIO) {
 				adyacencias.put(nodo,  List.of(getMapaMundial().get(nodo).get(1), getMapaMundial().get(nodo).get(2)));
+			}else {
+				adyacencias.put(nodo,  List.of(PokemonAgentState.VACIO, getMapaMundial().get(nodo).get(2)));
 			}
-			
-			adyacencias.put(nodo,  List.of(PokemonAgentState.VACIO, getMapaMundial().get(nodo).get(2)));
 		}
-		cantCiclosDesdeUltimoUsoSatelite +=1;
+		
 		return adyacencias;
 	}
 
 
+	
+	public void moverEnemigos() {
+		Set<Integer> nodos = mapaMundial.keySet();
+		List<Enemigo> enemigos = new ArrayList<>();
+
+		for (Integer nodo : nodos) {
+			if((int)(mapaMundial.get(nodo).get(2)) == PokemonPerception.ENEMIGO_PERCEPTION) {
+				Enemigo enemigo = (Enemigo) mapaMundial.get(nodo).get(1);
+				enemigos.add(enemigo);
+			}
+		}
+		
+		for (Enemigo enemigo : enemigos) {
+	
+				Integer posicionActual = enemigo.getPosicion();
+				List<Integer> nodosAdyacentes = (List<Integer>) mapaMundial.get(posicionActual).get(0); //obtengo los nodos adyacentes a los enemigos			
+				List<Integer> nodosAdyacentesVacios = new ArrayList<>();
+				for (Integer nodoAdyacente : nodosAdyacentes) {
+					if((int)(mapaMundial.get(nodoAdyacente).get(2)) == PokemonPerception.EMPTY_PERCEPTION && nodoAdyacente != charmander.getPosicion()) { //si mi nodo adyacente esta vacio o no esta el pokemon agente entro
+						nodosAdyacentesVacios.add(nodoAdyacente);
+					}
+				}
+				if(nodosAdyacentesVacios.size() != 0) { //si tengo nodos adyacentes vacios entro
+					Integer aux = getNumeroRandom(0, nodosAdyacentesVacios.size() -1);
+					Integer posicion = nodosAdyacentesVacios.get(aux); //obtengo una posicion aleatoria de la lista de nodos adyacentes vacios
+					enemigo.setPosicion(posicion);
+					mapaMundial.replace(posicionActual, List.of(mapaMundial.get(posicionActual).get(0), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
+					mapaMundial.replace(posicion, List.of(mapaMundial.get(posicion).get(0), enemigo, PokemonPerception.ENEMIGO_PERCEPTION));
+				}
+			
+		}
+	}
 /*
 	public void modificarPosicionCharmander(Integer nodoActual, Charmander charmander2) {
 		this.mapaMundial.replace(nodoActual, List.of(mapaMundial.get(nodoActual).get(0),PokemonAgentState.VACIO ,mapaMundial.get(nodoActual).get(2)));
@@ -167,12 +208,7 @@ public class PokemonEnvironmentState extends EnvironmentState{
 	
 	public Map<Integer, List<Object>> usarSatelite() {
 		
-		if (cantCiclosDesdeUltimoUsoSatelite <1) {
-			return null;
-		}
-		cantCiclosDesdeUltimoUsoSatelite = 0;
 		return mapaMundial;
-	
 	}
 
 	public void vencerPokemonFinal(PokemonMaestro boss, Integer nodoActual) {
@@ -182,6 +218,35 @@ public class PokemonEnvironmentState extends EnvironmentState{
 
 	public void eliminarPokebola(Integer nodoActual) {
 		this.mapaMundial.replace(nodoActual, List.of(mapaMundial.get(nodoActual).get(0), PokemonAgentState.VACIO, PokemonPerception.EMPTY_PERCEPTION));
+	}
+	
+	public Integer getNumeroRandom(Integer min, Integer max) {
+		Random aleatorio = new Random();
+		return min+aleatorio.nextInt( (max+1) - min);
+	}
+
+	public Integer getCiclosSinMoverseEnemigos() {
+		return ciclosSinMoverseEnemigos;
+	}
+
+	public void setCiclosSinMoverseEnemigos(Integer ciclosSinMoverseEnemigos) {
+		this.ciclosSinMoverseEnemigos = ciclosSinMoverseEnemigos;
+	}
+
+	public Integer getCantCiclosDesdeUltimoUsoSatelite() {
+		return cantCiclosDesdeUltimoUsoSatelite;
+	}
+
+	public void setCantCiclosDesdeUltimoUsoSatelite(Integer cantCiclosDesdeUltimoUsoSatelite) {
+		this.cantCiclosDesdeUltimoUsoSatelite = cantCiclosDesdeUltimoUsoSatelite;
+	}
+
+	public Integer getCiclosSatelite() {
+		return ciclosSatelite;
+	}
+
+	public void setCiclosSatelite(Integer ciclosSatelite) {
+		this.ciclosSatelite = ciclosSatelite;
 	}
 	
 	
