@@ -23,6 +23,7 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 	private Integer cantidadMovimientosTotales;
 	
 	public Integer cantidadMovimientosSinPerderEnergia;
+	private Integer energiaFaltanteVencerPokemonFinal;
 	
 	public final static Integer VACIO = 1000;
 	private Boolean vencioPokemonMaestro = false;
@@ -48,8 +49,11 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		listaAtaquesEspeciales.add(ataque2);
 		listaAtaquesEspeciales.add(ataque3);
 		
+		
+		//ver la forma de no hardcodear
+		//energia inicial del pokemon maestro menos la del agente
 		cantidadMovimientosTotales=0;
-
+		energiaFaltanteVencerPokemonFinal = 15;
 	}
 
 
@@ -155,6 +159,11 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 		listaAtaquesEspeciales.add(ataque1);
 		listaAtaquesEspeciales.add(ataque2);
 		listaAtaquesEspeciales.add(ataque3);
+		cantidadMovimientosTotales=0;
+		
+		//ver la forma de no hardcodear
+		//energia inicial del pokemon maestro menos la del agente
+		energiaFaltanteVencerPokemonFinal = 15;
 	}
 	
 
@@ -269,4 +278,14 @@ String mapa = new String();
 		this.cantidadMovimientosTotales += 1;
 	}
 
+	public double getEnergiaFaltanteVencerPokemonFinal() {
+		return this.energiaFaltanteVencerPokemonFinal;
+	}
+
+	
+	public void setEnergiaFaltanteVencerPokemonFinal(Integer energiaAgente) { 
+		//ver como no hardcodear
+		Integer energiaPokemonMaestro = 35;
+		this.energiaFaltanteVencerPokemonFinal = energiaPokemonMaestro - energiaAgente;//en esta funcion calculo la energia faltante para vencer al boss
+	}
 }

@@ -37,7 +37,7 @@ public class RecogerEnergiaPokebola extends SearchAction{
 				charmander.evaluarSubirDeNivel();
 
 				pokemonState.setCharmander(charmander);
-
+				pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 				
 				return pokemonState;
 			}
@@ -74,7 +74,7 @@ public class RecogerEnergiaPokebola extends SearchAction{
 				
 				pokemonEnvironmentState.setCharmander(charmander);
 				pokemonEnvironmentState.eliminarPokebola(nodoActual);
-				
+				pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 				
 				return pokemonEnvironmentState;
 			}

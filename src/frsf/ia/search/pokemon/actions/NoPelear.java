@@ -36,7 +36,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 					charmander.incrementarContadoresAtaques();
 					
 					pokemonState.setCharmander(charmander);
-					
+					pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 					//hacer subir de nivel
 					//hacer contadores para ataques
 					return pokemonState;
@@ -52,7 +52,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 					charmander.incrementarContadoresAtaques();
 					
 					pokemonState.setCharmander(charmander);
-					
+					pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 					//hacer subir de nivel
 					//hacer contadores para ataques
 					return pokemonState;
@@ -92,7 +92,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 					
 					
 					pokemonState.setCharmander(charmander);
-					
+					pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 					pokemonEnvironmentState.setCharmander(charmander);
 					return pokemonEnvironmentState;
 					
@@ -106,7 +106,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 					charmander.incrementarContadoresAtaques();
 					
 					pokemonState.setCharmander(charmander);
-					
+					pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 					pokemonEnvironmentState.setCharmander(charmander);
 					return pokemonEnvironmentState;
 				}

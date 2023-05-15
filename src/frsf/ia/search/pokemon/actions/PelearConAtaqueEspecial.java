@@ -48,6 +48,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 							charmander.evaluarSubirDeNivel();
 							ataqueUtilizado = ataque;
 							pokemonState.setCharmander(charmander);
+							pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 							
 							return pokemonState;
 						}
@@ -75,7 +76,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 						
 							pokemonState.setCharmander(charmander);
 							pokemonState.vencerPokemonFinal(boss, nodoActual);
-							
+							pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 							
 							return pokemonState;
 						}
@@ -135,6 +136,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 							
 							pokemonEnvironmentState.eliminarEnemigo(nodoActual);
 							pokemonEnvironmentState.setCharmander(charmander);
+							pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 							
 							return pokemonEnvironmentState;
 						}
@@ -170,6 +172,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 				
 							pokemonEnvironmentState.setCharmander(charmander);
 							pokemonEnvironmentState.vencerPokemonFinal(boss, nodoActual);
+							pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 							
 							return pokemonEnvironmentState;
 						}

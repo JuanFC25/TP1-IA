@@ -41,7 +41,8 @@ public class Pelear extends SearchAction{
 					charmander.evaluarSubirDeNivel();
 					
 					pokemonState.setCharmander(charmander);
-
+					pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
+					
 					return pokemonState;
 				}
 			} else if ((Integer) mapaAgente.get(charmander.getPosicion()).get(2) == PokemonPerception.POKEMON_MAESTRO_PERCEPTION){
@@ -56,8 +57,9 @@ public class Pelear extends SearchAction{
 					charmander.evaluarSubirDeNivel();
 					
 					pokemonState.setCharmander(charmander);
-					
+					pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 					pokemonState.vencerPokemonFinal(boss, nodoActual);
+					
 
 					return pokemonState;
 				}
@@ -100,6 +102,7 @@ public class Pelear extends SearchAction{
 					
 					pokemonState.eliminarEnemigo(nodoActual);
 					pokemonState.setCharmander(charmander);
+					pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 					
 					pokemonEnvironmentState.eliminarEnemigo(nodoActual);
 					pokemonEnvironmentState.setCharmander(charmander);
@@ -124,6 +127,7 @@ public class Pelear extends SearchAction{
 					
 					pokemonState.setCharmander(charmander);
 					pokemonState.vencerPokemonFinal(boss, nodoActual);
+					pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
 					
 					pokemonEnvironmentState.setCharmander(charmander);
 					pokemonEnvironmentState.vencerPokemonFinal(boss, nodoActual);
