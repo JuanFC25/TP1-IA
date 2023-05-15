@@ -28,23 +28,22 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 		if (charmander.getEnergiaActual() > 0) {      // se fija si el pokemon agente esta vivo
 			if((Integer) mapaAgente.get(charmander.getPosicion()).get(2) == PokemonPerception.ENEMIGO_PERCEPTION) {
 				Enemigo enemigo = ((Enemigo) mapaAgente.get(charmander.getPosicion()).get(1));
-				//esto preguntar.
 				if( charmander.getEnergiaActual() <= enemigo.getEnergia()) {
 					Integer energia = (int) (charmander.getEnergiaActual() - (enemigo.getEnergia()/4));
+					
 					charmander.setEnergiaActual(energia);
 					charmander.setPuedeMoverse(true);
 					charmander.incrementarContadoresAtaques();
 					
 					pokemonState.setCharmander(charmander);
 					pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
-					//hacer subir de nivel
-					//hacer contadores para ataques
+				
 					return pokemonState;
 				}
 			}
 			else if((Integer) mapaAgente.get(charmander.getPosicion()).get(2) == PokemonPerception.POKEMON_MAESTRO_PERCEPTION){
 				PokemonMaestro boss = ((PokemonMaestro) mapaAgente.get(charmander.getPosicion()).get(1));
-				//esto preguntar.
+			
 				if( charmander.getEnergiaActual() <= boss.getEnergia()) {
 					Integer energia = (int) (charmander.getEnergiaActual() - (boss.getEnergia()/4));
 					charmander.setEnergiaActual(energia);
@@ -53,8 +52,7 @@ PokemonAgentState pokemonState = (PokemonAgentState) s;
 					
 					pokemonState.setCharmander(charmander);
 					pokemonState.setEnergiaFaltanteVencerPokemonFinal(charmander.getEnergiaActual());
-					//hacer subir de nivel
-					//hacer contadores para ataques
+		
 					return pokemonState;
 				}
 			}
