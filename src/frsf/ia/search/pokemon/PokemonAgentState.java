@@ -102,7 +102,7 @@ public class PokemonAgentState  extends SearchBasedAgentState{
 
 	
 	/**
-     * This method is used to update the Pacman State when a Perception is
+     * This method is used to update the Pokemon state when a Perception is
      * received by the Simulator.
      */
 	@Override
